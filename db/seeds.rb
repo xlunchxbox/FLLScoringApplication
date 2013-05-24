@@ -32,6 +32,18 @@ Judge.create!(firstName: 'John', lastName: 'Smith',
   phoneNumber: '1234568', userName: 'Judge1', 
   email: 'judge1@judges.com') 
   
+Judge.create!(firstName: 'Paul', lastName: 'Smith', 
+  street: '1234 Fake St Dr', city: 'Houston',
+  zip: '77864', state: 'TX', areaCode: '284',
+  phoneNumber: '7392018', userName: 'Judge2', 
+  email: 'judge2@judges.com') 
+
+Judge.create!(firstName: 'Guy', lastName: 'Pierce', 
+  street: '8899 This Road', city: 'Houston',
+  zip: '87643', state: 'TX', areaCode: '837',
+  phoneNumber: '8473982', userName: 'Judge3', 
+  email: 'judge3@judges.com') 
+  
 #Judge Template
 # Judge.create!(firstName: '', lastName: '', 
 #               street: '', city: '',
