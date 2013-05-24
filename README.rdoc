@@ -24,3 +24,9 @@ Rails G Commands for Controllers
 rails g controller static_pages home about 
 
 rails g controller sessions new create destroy
+
+=================
+Terminal Commands
+=================
+rake db:drop && rake db:create && rake db:migrate && rake db:seed
+
