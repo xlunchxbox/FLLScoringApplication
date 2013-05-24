@@ -1,0 +1,41 @@
+<h1>Listing Admins</h1>
+
+<table>
+  <tr>
+	<th>Username</th>
+	<th>First Name</th>
+	<th>Last Name</th>
+	<th>Street</th>
+	<th>City</th>
+	<th>State</th>
+	<th>Zip</th>
+	<th>Area Code</th>
+	<th>Phone Number</th>
+	<th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admins.each do |admin| %>
+  <tr>
+	<td><%= admin.userName %></td>
+	<td><%= admin.firstName %></td>
+	<td><%= admin.lastName %></td>
+	<td><%= admin.street %></td>
+	<td><%= admin.city %></td>
+	<td><%= admin.state %></td>
+	<td><%= admin.zip %></td>
+	<td><%= admin.areaCode %></td>
+	<td><%= admin.phoneNumber %></td>
+	<td><%= admin.email %></td>
+    <td><%= link_to 'Show', admin %></td>
+    <td><%= link_to 'Edit', edit_admin_path(admin) %></td>
+    <td><%= link_to 'Destroy', admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Admin', new_admin_path %>

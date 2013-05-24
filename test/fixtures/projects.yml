@@ -1,0 +1,59 @@
+# == Schema Information
+#
+# Table name: projects
+#
+#  id                        :integer          not null, primary key
+#  problemIdentification     :integer
+#  sourcesOfInformation      :integer
+#  problemAnalysis           :integer
+#  reviewExistingSolutions   :integer
+#  teamSolution              :integer
+#  innovation                :integer
+#  implementation            :integer
+#  sharing                   :integer
+#  creativity                :integer
+#  presentationEffectiveness :integer
+#  researchTotal             :integer
+#  innovativeSolutionTotal   :integer
+#  presentationTotal         :integer
+#  projectTotal              :integer
+#  teamNumber                :integer
+#  created_at                :datetime         not null
+#  updated_at                :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  problemIdentification: 1
+  sourcesOfInformation: 1
+  problemAnalysis: 1
+  reviewExistingSolutions: 1
+  teamSolution: 1
+  innovation: 1
+  implementation: 1
+  sharing: 1
+  creativity: 1
+  presentationEffectiveness: 1
+  researchTotal: 1
+  innovativeSolutionTotal: 1
+  presentationTotal: 1
+  project: 1
+  teamNumber: 1
+
+two:
+  problemIdentification: 1
+  sourcesOfInformation: 1
+  problemAnalysis: 1
+  reviewExistingSolutions: 1
+  teamSolution: 1
+  innovation: 1
+  implementation: 1
+  sharing: 1
+  creativity: 1
+  presentationEffectiveness: 1
+  researchTotal: 1
+  innovativeSolutionTotal: 1
+  presentationTotal: 1
+  project: 1
+  teamNumber: 1

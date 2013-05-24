@@ -1,0 +1,76 @@
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :teamNumber %><br />
+    <%= f.number_field :teamNumber %>
+  </div>
+  <div class="field">
+    <%= f.label :problemIdentification %><br />
+    <%= f.select :problemIdentification, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%= f.label :sourcesOfInformation %><br />
+    <%= f.select :sourcesOfInformation, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%= f.label :problemAnalysis %><br />
+    <%= f.select :problemAnalysis, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%= f.label :reviewExistingSolutions %><br />
+    <%= f.select :reviewExistingSolutions, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%= f.label :teamSolution %><br />
+    <%= f.select :teamSolution, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%= f.label :innovation %><br />
+    <%= f.select :innovation, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%= f.label :implementation %><br />
+    <%= f.select :implementation, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%= f.label :sharing %><br />
+    <%= f.select :sharing, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%= f.label :creativity %><br />
+    <%= f.select :creativity, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%= f.label :presentationEffectiveness %><br />
+    <%= f.select :presentationEffectiveness, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%# f.label :researchTotal %>
+    <%# f.select :researchTotal, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%# f.label :innovativeSolutionTotal %>
+    <%# f.select :innovativeSolutionTotal, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%# f.label :presentationTotal %>
+    <%# f.select :presentationTotal, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%# f.label :projectTotal %>
+    <%# f.select :projectTotal, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

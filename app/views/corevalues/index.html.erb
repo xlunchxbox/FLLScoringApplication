@@ -1,0 +1,49 @@
+<h1>Listing Core Values</h1>
+
+<table>
+  <tr>
+	<th>Teamnumber</th>
+    <th>Discovery</th>
+    <th>Teamspirit</th>
+    <th>Integration</th>
+    <th>Effectiveness</th>
+    <th>Efficiency</th>
+    <th>Kidsdothework</th>
+    <th>Inclusion</th>
+    <th>Respect</th>
+    <th>Coopertition</th>
+    <th>Inspirationtotal</th>
+    <th>Teamworktotal</th>
+    <th>Graciousprofessionalismtotal</th>
+    <th>Corevaluetotal</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @corevalues.each do |corevalue| %>
+  <tr>
+    <td><%= corevalue.teamNumber %></td>
+    <td><%= corevalue.discovery %></td>
+    <td><%= corevalue.teamSpirit %></td>
+    <td><%= corevalue.integration %></td>
+    <td><%= corevalue.effectiveness %></td>
+    <td><%= corevalue.efficiency %></td>
+    <td><%= corevalue.kidsDoTheWork %></td>
+    <td><%= corevalue.inclusion %></td>
+    <td><%= corevalue.respect %></td>
+    <td><%= corevalue.coopertition %></td>
+    <td><%= corevalue.inspirationTotal %></td>
+    <td><%= corevalue.teamworkTotal %></td>
+    <td><%= corevalue.graciousProfessionalismTotal %></td>
+    <td><%= corevalue.coreValueTotal %></td>
+    <td><%= link_to 'Show', corevalue %></td>
+    <td><%= link_to 'Edit', edit_corevalue_path(corevalue) %></td>
+    <td><%= link_to 'Destroy', corevalue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Corevalue', new_corevalue_path %>

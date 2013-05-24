@@ -1,0 +1,26 @@
+==========================
+Rails G Commands for Users
+==========================
+
+rails g scaffold User firstName:string lastName:string street:string city:string zip:integer state:string areaCode:integer phoneNumber:integer passwordDigest:string rememberToken:string userName:string email:string type:string
+
+rails g scaffold Admin
+
+rails g scaffold Judge
+
+============================
+Rails G Commands for Rubrics
+============================
+rails g scaffold Project teamNumber:integer problemIdentification:integer sourcesOfInformation:integer problemAnalysis:integer reviewExistingSolutions:integer teamSolution:integer innovation:integer implementation:integer sharing:integer creativity:integer presentationEffectiveness:integer researchTotal:integer innovativeSolutionTotal:integer presentationTotal:integer projectTotal:integer
+
+rails g scaffold Corevalues teamNumber:integer discovery:integer teamSpirit:integer integration:integer effectiveness:integer efficiency:integer kidsDoTheWork:integer inclusion:integer respect:integer coopertition:integer inspirationTotal:integer teamworkTotal:integer graciousProfessionalismTotal:integer coreValueTotal:integer 
+
+rails g scaffold Robotdesign teamNumber:integer durability:integer mechanicalEfficiency:integer mechanization:integer programmingQuality:integer programmingEfficiency:integer automationNavigation:integer designProcess:integer missionStrategy:integer innovation:integer mechanicalDesignTotal:integer programmingTotal:integer strategyInnovationTotal:integer robotDesignTotal:integer 
+
+================================
+Rails G Commands for Controllers
+================================
+
+rails g controller static_pages home about 
+
+rails g controller sessions new create destroy

@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Problemidentification:</b>
+  <%= @project.problemIdentification %>
+</p>
+
+<p>
+  <b>Sourcesofinformation:</b>
+  <%= @project.sourcesOfInformation %>
+</p>
+
+<p>
+  <b>Problemanalysis:</b>
+  <%= @project.problemAnalysis %>
+</p>
+
+<p>
+  <b>Reviewexistingsolutions:</b>
+  <%= @project.reviewExistingSolutions %>
+</p>
+
+<p>
+  <b>Teamsolution:</b>
+  <%= @project.teamSolution %>
+</p>
+
+<p>
+  <b>Innovation:</b>
+  <%= @project.innovation %>
+</p>
+
+<p>
+  <b>Implementation:</b>
+  <%= @project.implementation %>
+</p>
+
+<p>
+  <b>Sharing:</b>
+  <%= @project.sharing %>
+</p>
+
+<p>
+  <b>Creativity:</b>
+  <%= @project.creativity %>
+</p>
+
+<p>
+  <b>Presentationeffectiveness:</b>
+  <%= @project.presentationEffectiveness %>
+</p>
+
+<p>
+  <b>Researchtotal:</b>
+  <%= @project.researchTotal %>
+</p>
+
+<p>
+  <b>Innovativesolutiontotal:</b>
+  <%= @project.innovativeSolutionTotal %>
+</p>
+
+<p>
+  <b>Presentationtotal:</b>
+  <%= @project.presentationTotal %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @project.projectTotal %>
+</p>
+
+<p>
+  <b>Teamnumber:</b>
+  <%= @project.teamNumber %>
+</p>
+
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

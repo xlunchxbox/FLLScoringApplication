@@ -1,0 +1,49 @@
+<h1>Listing Robot Designs</h1>
+
+<table>
+  <tr>
+    <th>Teamnumber</th>
+    <th>Durability</th>
+    <th>Mechanicalefficiency</th>
+    <th>Mechanization</th>
+    <th>Programmingquality</th>
+    <th>Programmingefficiency</th>
+    <th>Automationnavigation</th>
+    <th>Designprocess</th>
+    <th>Missionstrategy</th>
+    <th>Innovation</th>
+    <th>Mechanicaldesigntotal</th>
+    <th>Programmingtotal</th>
+    <th>Strategyinnovationtotal</th>
+    <th>Robotdesign</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @robotdesigns.each do |robotdesign| %>
+  <tr>
+    <td><%= robotdesign.teamNumber %></td>
+    <td><%= robotdesign.durability %></td>
+    <td><%= robotdesign.mechanicalEfficiency %></td>
+    <td><%= robotdesign.mechanization %></td>
+    <td><%= robotdesign.programmingQuality %></td>
+    <td><%= robotdesign.programmingEfficiency %></td>
+    <td><%= robotdesign.automationNavigation %></td>
+    <td><%= robotdesign.designProcess %></td>
+    <td><%= robotdesign.missionStrategy %></td>
+    <td><%= robotdesign.innovation %></td>
+    <td><%= robotdesign.mechanicalDesignTotal %></td>
+    <td><%= robotdesign.programmingTotal %></td>
+    <td><%= robotdesign.strategyInnovationTotal %></td>
+    <td><%= robotdesign.robotDesignTotal %></td>
+    <td><%= link_to 'Show', robotdesign %></td>
+    <td><%= link_to 'Edit', edit_robotdesign_path(robotdesign) %></td>
+    <td><%= link_to 'Destroy', robotdesign, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Robotdesign', new_robotdesign_path %>

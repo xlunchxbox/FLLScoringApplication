@@ -1,0 +1,72 @@
+<%= form_for(@robotdesign) do |f| %>
+  <% if @robotdesign.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@robotdesign.errors.count, "error") %> prohibited this robotdesign from being saved:</h2>
+
+      <ul>
+      <% @robotdesign.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :teamNumber %><br />
+    <%= f.number_field :teamNumber %>
+  </div>
+  <div class="field">
+    <%= f.label :durability %><br />
+    <%= f.select :durability, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%= f.label :mechanicalEfficiency %><br />
+    <%= f.select :mechanicalEfficiency, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%= f.label :mechanization %><br />
+    <%= f.select :mechanization, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%= f.label :programmingQuality %><br />
+    <%= f.select :programmingQuality, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%= f.label :programmingEfficiency %><br />
+    <%= f.select :programmingEfficiency, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%= f.label :automationNavigation %><br />
+    <%= f.select :automationNavigation, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%= f.label :designProcess %><br />
+    <%= f.select :designProcess, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%= f.label :missionStrategy %><br />
+    <%= f.select :missionStrategy, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%= f.label :innovation %><br />
+    <%= f.select :innovation, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%# f.label :mechanicalDesignTotal %>
+    <%# f.select :mechanicalDesignTotal, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%# f.label :programmingTotal %>
+    <%# f.select :programmingTotal, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%# f.label :strategyInnovationTotal %>
+    <%# f.select :strategyInnovationTotal, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="field">
+    <%# f.label :robotDesignTotal %>
+    <%# f.select :robotDesignTotal, options_for_select([1,2,3,4])%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
