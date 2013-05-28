@@ -1,0 +1,53 @@
+<h1>Administrator Console</h1>
+
+<div class="btn-group">
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    Create Accounts
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><%= link_to "Administrator", '/admins/new' %></li>
+	<li><%= link_to "Judge", '/judges/new' %></li>    
+  </ul>
+</div>
+
+
+<div class="btn-group">
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+	  New Form Entry
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><%= link_to "Core Values", '/corevalues/new' %></li>
+	<li><%= link_to "Robot Design", '/robotdesigns/new' %></li>
+	<li><%= link_to "Project", '/projects/new' %></li>
+  </ul>
+</div>
+
+
+<div class="btn-group">
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    Edit Accounts
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><%= link_to "Administrator", '/admins' %></li>
+	<li><%= link_to "Judges", '/judges' %></li>
+  </ul>
+</div>
+
+<div class="btn-group">
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+	  Edit Form Entries
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><%= link_to "Core Values", '/corevalues' %></li>
+	<li><%= link_to "Robot Design", '/robotdesigns' %></li>
+	<li><%= link_to "Project", '/projects' %></li>
+  </ul>
+</div>
+
+
+
+

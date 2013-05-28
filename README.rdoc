@@ -25,6 +25,8 @@ rails g controller static_pages home about
 
 rails g controller sessions new create destroy
 
+rails g controller adminconsole 
+
 =================
 Terminal Commands
 =================

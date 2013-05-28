@@ -1,15 +1,172 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<body>
-		<br/><br/><br/><br/><br/><br/>
-		<p>Temporary Test Links</p>
-		<li><%= link_to "Judges", '/judges' %></li> <br />
-		<li><%= link_to "Admins", '/admins' %></li> <br />
-		<li><%= link_to "Core Values", '/corevalues' %></li> <br />
-		<li><%= link_to "Robot Design", 'robotdesigns' %></li> <br />
-		<li><%= link_to "Project", 'projects' %></li> <br />
-	</body>
-	
+	<title>Carousel Template</title>
+	<link href="bootstrap.css" rel="stylesheet">
+	<link href="bootstrap-responsive.css" rel="stylesheet">
+	<link href="custom.css" rel="stylesheet">	
 </head>
+<body>
+	<div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <center><%= image_tag("slide1.png")%></center>
+          <div class="container">
+            <div class="carousel-caption">
+
+              <h1 style="color:white">Core Values: Top 10 Teams</h1>
+			  <br/><br/>
+			  <table class = "table table-bordered table-condensed">
+			    <tr bgcolor="#FFFFFF">
+			  	<th><%= sortableCV "teamNumber", "Team" %></th>
+			      <th><%= sortableCV "discovery", "Dis" %></th>
+			      <th><%= sortableCV "teamSpirit", "Spirit" %></th>
+			      <th><%= sortableCV "integration", "Integ" %></th>
+			      <th><%= sortableCV "effectiveness", "Effect" %></th>
+			      <th><%= sortableCV "efficiency", "Effic" %></th>
+			      <th><%= sortableCV "kidsDoTheWork", "KDTW" %></th>
+			      <th><%= sortableCV "inclustion", "Incl" %></th>
+			      <th><%= sortableCV "respect", "Resp" %></th>
+			      <th><%= sortableCV "coopertition", "Coop" %></th>
+			      <th><%= sortableCV "inspirationTotal", "Ins Total" %></th>
+			      <th><%= sortableCV "teamworkTotal", "TW Total" %></th>
+			      <th><%= sortableCV "graciousProfessionalismTotal", "GP Total" %></th>
+			      <th><%= sortableCV "coreValueTotal", "CV Total" %></th>
+			    </tr>
+
+			  <% @corevalues.take(10).each do |corevalue| %>
+			    <tr bgcolor="#FFFFFF">
+			      <td><%= corevalue.teamNumber %></td>
+			      <td><%= corevalue.discovery %></td>
+			      <td><%= corevalue.teamSpirit %></td>
+			      <td><%= corevalue.integration %></td>
+			      <td><%= corevalue.effectiveness %></td>
+			      <td><%= corevalue.efficiency %></td>
+			      <td><%= corevalue.kidsDoTheWork %></td>
+			      <td><%= corevalue.inclusion %></td>
+			      <td><%= corevalue.respect %></td>
+			      <td><%= corevalue.coopertition %></td>
+			      <td><%= corevalue.inspirationTotal %></td>
+			      <td><%= corevalue.teamworkTotal %></td>
+			      <td><%= corevalue.graciousProfessionalismTotal %></td>
+			      <td><%= corevalue.coreValueTotal %></td>
+			    </tr>
+			  <% end %>
+			  </table>
+			  
+			  
+			  
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <center><%= image_tag("slide2.png") %></center>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 style="color:white">Project: Top 10 Teams</h1>
+			  <table class = "table table-bordered table-condensed">
+			    <tr bgcolor="#FFFFFF">
+			      <th><%= sortableP "teamNumber","Team" %></th>
+			      <th><%= sortableP "problemIdentification", "Prob Iden" %></th>
+			      <th><%= sortableP "sourcesOfInformation", "SOI" %></th>
+			      <th><%= sortableP "problemAnalysis", "PA" %></th>
+			      <th><%= sortableP "reviewExistingSolutions", "RES" %></th>
+			      <th><%= sortableP "teamSolution", "Team Sol" %></th>
+			      <th><%= sortableP "innovation", "Inno" %></th>
+			      <th><%= sortableP "implementation", "Impl" %></th>
+			      <th><%= sortableP "sharing", "Shar" %></th>
+			      <th><%= sortableP "creativity", "Crea" %></th>
+			      <th><%= sortableP "presentationEffectiveness", "PE" %></th>
+			      <th><%= sortableP "researchTotal", "R Total" %></th>
+			      <th><%= sortableP "innovativeSolutionTotal", "IS Total" %></th>
+			      <th><%= sortableP "presentationTotal", "P Total" %></th>
+			      <th><%= sortableP "projectTotal", "Proj Total" %></th>
+			    </tr>
+
+			  <% @projects.take(10).each do |project| %>
+			    <tr bgcolor="#FFFFFF">
+			      <td><%= project.teamNumber %></td>
+			      <td><%= project.problemIdentification %></td>
+			      <td><%= project.sourcesOfInformation %></td>
+			      <td><%= project.problemAnalysis %></td>
+			      <td><%= project.reviewExistingSolutions %></td>
+			      <td><%= project.teamSolution %></td>
+			      <td><%= project.innovation %></td>
+			      <td><%= project.implementation %></td>
+			      <td><%= project.sharing %></td>
+			      <td><%= project.creativity %></td>
+			      <td><%= project.presentationEffectiveness %></td>
+			      <td><%= project.researchTotal %></td>
+			      <td><%= project.innovativeSolutionTotal %></td>
+			      <td><%= project.presentationTotal %></td>
+			      <td><%= project.projectTotal %></td>
+			    </tr>
+			  <% end %>
+			  </table>
+
+            </div>
+          </div>
+        </div>
+		
+		
+        <div class="item">
+          <center><%= image_tag("slide3.png") %></center>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 style="color:white">Robot Design: Top 10 Teams</h1>
+			  <table class = "table table-bordered table-condensed">
+			    <tr bgcolor="#FFFFFF">
+			      <th><%= sortableRD "teamNumber" , "Team" %></th>
+			      <th><%= sortableRD "durability" , "Dura" %></th>
+			      <th><%= sortableRD "mechanicalEfficiency" , "Mech Eff" %></th>
+			      <th><%= sortableRD "mechanization" , "Mecha" %></th>
+			      <th><%= sortableRD "programmingQuality" , "Prog Qual" %></th>
+			      <th><%= sortableRD "programmingEfficiency" , "Prog Eff" %></th>
+			      <th><%= sortableRD "automationNavigation" , "Auto Nav" %></th>
+			      <th><%= sortableRD "designProcess" , "Des Pro" %></th>
+			      <th><%= sortableRD "missionStrategy" , "Miss Strat" %></th>
+			      <th><%= sortableRD "innovation" , "Inno" %></th>
+			      <th><%= sortableRD "mechanicalDesignTotal" , "MD Total" %></th>
+			      <th><%= sortableRD "programmingTotal" , "Pr Total" %></th>
+			      <th><%= sortableRD "strategyInnovationTotal" , "SI Total" %></th>
+			      <th><%= sortableRD "robotDesignTotal" , "RD Total" %></th>
+			    </tr>
+
+			  <% @robotdesigns.take(10).each do |robotdesign| %>
+			    <tr bgcolor="#FFFFFF">
+			      <td><%= robotdesign.teamNumber %></td>
+			      <td><%= robotdesign.durability %></td>
+			      <td><%= robotdesign.mechanicalEfficiency %></td>
+			      <td><%= robotdesign.mechanization %></td>
+			      <td><%= robotdesign.programmingQuality %></td>
+			      <td><%= robotdesign.programmingEfficiency %></td>
+			      <td><%= robotdesign.automationNavigation %></td>
+			      <td><%= robotdesign.designProcess %></td>
+			      <td><%= robotdesign.missionStrategy %></td>
+			      <td><%= robotdesign.innovation %></td>
+			      <td><%= robotdesign.mechanicalDesignTotal %></td>
+			      <td><%= robotdesign.programmingTotal %></td>
+			      <td><%= robotdesign.strategyInnovationTotal %></td>
+			      <td><%= robotdesign.robotDesignTotal %></td>
+			    </tr>
+			  <% end %>
+			  </table>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+	
+	<br/><br/><br/><br/><br/><br/>
+	<p>Temporary Test Links</p>
+	<li><%= link_to "Judges", '/judges' %></li> <br />
+	<li><%= link_to "Admins", '/admins' %></li> <br />
+	<li><%= link_to "Core Values", '/corevalues' %></li> <br />
+	<li><%= link_to "Robot Design", 'robotdesigns' %></li> <br />
+	<li><%= link_to "Project", 'projects' %></li> <br />
+	<li><%= link_to "Admin Console", 'adminconsole/console' %></li> <br />
+</body>
 </html>
