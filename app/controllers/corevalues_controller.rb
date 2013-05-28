@@ -1,8 +1,8 @@
 class CorevaluesController < ApplicationController
   # GET /corevalues
   # GET /corevalues.json
-  
   helper_method :sort_column, :sort_direction
+  
   def index
     @corevalues = Corevalue.order(sort_column + " " + sort_direction)
 

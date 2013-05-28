@@ -1,8 +1,10 @@
 class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
+  helper_method :sort_column, :sort_direction
+  
   def index
-    @projects = Project.all
+    @projects = Project.order(sort_column + " " + sort_direction)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -84,5 +86,13 @@ class ProjectsController < ApplicationController
       format.html { redirect_to projects_url }
       format.json { head :no_content }
     end
+  end
+  private
+  def sort_column
+    Project.column_names.include?(params[:sort]) ? params[:sort] : "projectTotal"
+  end
+  
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "desc"
   end
 end

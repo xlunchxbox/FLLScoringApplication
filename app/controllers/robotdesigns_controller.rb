@@ -1,8 +1,10 @@
 class RobotdesignsController < ApplicationController
   # GET /robotdesigns
   # GET /robotdesigns.json
+  helper_method :sort_column, :sort_direction
+  
   def index
-    @robotdesigns = Robotdesign.all
+    @robotdesigns = Robotdesign.order(sort_column + " " + sort_direction)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -84,5 +86,14 @@ class RobotdesignsController < ApplicationController
       format.html { redirect_to robotdesigns_url }
       format.json { head :no_content }
     end
+  end
+  
+  private
+  def sort_column
+    Robotdesign.column_names.include?(params[:sort]) ? params[:sort] : "robotDesignTotal"
+  end
+  
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "desc"
   end
 end
