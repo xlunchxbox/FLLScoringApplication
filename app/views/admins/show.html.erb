@@ -1,5 +1,55 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+	<b>First Name:</b>
+	<%= @admins.firstName %>
+</p>
 
-<%= link_to 'Edit', edit_admin_path(@admin) %> |
-<%= link_to 'Back', admins_path %>
+<p>
+	<b>Last Name:</b>
+	<%= @admins.lastName %>
+</p>
+
+<p>
+	<b>Street:</b>
+	<%= @admins.street %>
+</p>
+
+<p>
+	<b>City:</b>
+	<%= @admins.city %>
+</p>
+
+<p>
+	<b>Zip:</b>
+	<%= @admins.zip %>
+</p>
+
+<p>
+	<b>State:</b>
+	<%= @admins.state %>
+</p>
+
+<p>
+	<b>Area Code:</b>
+	<%= @admins.areaCode %>
+</p>
+
+<p>
+	<b>phoneNumber:</b>
+	<%= @admins.phoneNumber %>
+</p>
+
+<p>
+	<b>Username:</b>
+	<%= @admins.userName %>
+</p>
+
+<p>
+	<b>Email:</b>
+	<%= @admins.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_admins_path(@admins) %> |
+<%= link_to 'Back', adminss_path %>

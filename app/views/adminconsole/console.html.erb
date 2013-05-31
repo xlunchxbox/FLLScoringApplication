@@ -49,7 +49,19 @@
 </div>
 
 
-
+<div class="row" >
+  <div class="span6 offset3">
+	  <div class="actions">
+		  <br/><br/>
+		<% @corevalues.each do |corevalue|%>
+			<%= form_tag edit_corevalue_path(corevalue), method: 'get' do %>
+	  	  		<%= collection_select(:corevalue, :corevalue_id, Corevalue.order('created_at DESC'), :id, :teamNumber, :prompt => "Select Team") %>
+				<%= submit_tag "Submit!", :name => nil , class: "btn btn-large btn-primary" %>
+				<% end %>
+		<% end %>
+		</div>
+	</div>
+</div>
 
 
 

@@ -1,3 +1,6 @@
+<div class="row" >
+  <div class="span6 offset3">
+  <div class="actions">
 <%= form_for(@project) do |f| %>
   <% if @project.errors.any? %>
     <div id="error_explanation">
@@ -73,4 +76,8 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+		<%= f.submit 'Submit', class: 'btn btn-large btn-primary' %>
 <% end %>
+	  </div>
+  </div>
+</div>
