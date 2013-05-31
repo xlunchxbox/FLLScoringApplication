@@ -15,15 +15,15 @@ class StaticPagesController < ApplicationController
   
   private
   def sort_columnCV
-    Corevalue.column_names.include?(params[:sort]) ? params[:sort] : "corevaluetotal" 
+    Corevalue.column_names.include?(params[:sort]) ? params[:sort] : "corevalueTotal"
   end
   
   def sort_columnRD
-    Robotdesign.column_names.include?(params[:sort]) ? params[:sort] : "robotdesigntotal"
+    Robotdesign.column_names.include?(params[:sort]) ? params[:sort] : "robotDesignTotal"
   end
   
   def sort_columnP
-    Project.column_names.include?(params[:sort]) ? params[:sort] : "projecttotal"
+    Project.column_names.include?(params[:sort]) ? params[:sort] : "projectTotal"
   end
   
   def sort_direction
