@@ -11,6 +11,7 @@ FLLApplication::Application.routes.draw do
   
   get "adminconsole/console"
   
+  
 
   match '/about', to: 'static_pages#about'
   match '/help', to: 'static_pages#help'
