@@ -10,7 +10,7 @@ gem 'bootstrap-will_paginate'
 gem 'jquery-rails'
 gem 'bcrypt-ruby'
 gem 'thin'
-gem 'devise', '1.1rc0'
+gem 'devise'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

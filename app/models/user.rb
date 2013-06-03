@@ -21,6 +21,5 @@
 #
 
 class User < ActiveRecord::Base
-  
   attr_accessible :areaCode, :city, :email, :firstName, :lastName, :passwordDigest, :phoneNumber, :rememberToken, :state, :street, :type, :userName, :zip
 end
