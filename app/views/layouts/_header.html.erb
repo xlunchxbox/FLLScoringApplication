@@ -4,8 +4,9 @@
         <ul class="nav pull-right">
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "About", '/about' %></li>
-		  <li><%= link_to "Sign In", '#' %></li>
-
+		  <li><%= link_to "Sign In", '/users/sign_in' %></li>
+		  <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+		  
         </ul>
   </div>
 </header>

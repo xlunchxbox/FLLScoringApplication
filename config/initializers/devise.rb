@@ -86,7 +86,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "5e299e72277fda8c4f9eed1892e7a3b952332bc43784d2ce1a3572e9d1b95924675ee7f06c3e5bb98d36421627392b0a36407055bf869b40eab984ef659326ed"
+  # config.pepper = "cea4b2883e468df1723a95ef792a077ec71746a1c75ee999f2ea756dbc26a4a8b9c28997d054dfe989cb797fdad0e37bcf667ec7b39f484f549f20d253695333"
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -192,7 +192,7 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
-  # config.scoped_views = false
+   config.scoped_views = true
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).

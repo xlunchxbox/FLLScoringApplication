@@ -1,7 +1,8 @@
 <h1>Listing Users</h1>
 
-<table>
+<table class = "table table-bordered table-striped">
   <tr>
+    <th>Email</th>
     <th>Firstname</th>
     <th>Lastname</th>
     <th>Street</th>
@@ -10,10 +11,6 @@
     <th>State</th>
     <th>Areacode</th>
     <th>Phonenumber</th>
-    <th>Passworddigest</th>
-    <th>Remembertoken</th>
-    <th>Username</th>
-    <th>Email</th>
     <th>Type</th>
     <th></th>
     <th></th>
@@ -22,22 +19,19 @@
 
 <% @users.each do |user| %>
   <tr>
-    <td><%= user.firstName %></td>
-    <td><%= user.lastName %></td>
-    <td><%= user.street %></td>
-    <td><%= user.city %></td>
-    <td><%= user.zip %></td>
-    <td><%= user.state %></td>
-    <td><%= user.areaCode %></td>
-    <td><%= user.phoneNumber %></td>
-    <td><%= user.passwordDigest %></td>
-    <td><%= user.rememberToken %></td>
-    <td><%= user.userName %></td>
-    <td><%= user.email %></td>
-    <td><%= user.type %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	  <td><%= user.email %></td>	
+	  <td><%= user.firstName %></td>
+	  <td><%= user.lastName %></td>
+	  <td><%= user.street %></td>
+	  <td><%= user.city %></td>
+	  <td><%= user.zip %></td>
+	  <td><%= user.state %></td>
+	  <td><%= user.areaCode %></td>
+	  <td><%= user.phoneNumber %></td>
+	  <td><%= user.type %></td>
+	  <td><%= link_to 'Show', user %></td>
+	  <td><%= link_to 'Edit', edit_user_path(user) %></td>
+	  <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

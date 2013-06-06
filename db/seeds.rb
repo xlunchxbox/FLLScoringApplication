@@ -10,12 +10,14 @@
 Admin.create!(firstName: 'Chris', lastName: 'Cruz', 
               street: '7006 Belle Glen Dr.', city: 'Houston',
               zip: '77072', state: 'TX', areaCode: '281',
-              phoneNumber: '2245640', userName: 'xlunchxboxx', 
+              phoneNumber: '2245640', password: 'password',
+              password_confirmation: 'password', 
               email: 'chris1cruz@gmail.com')
 Admin.create!(firstName: 'Muhammad', lastName: 'Naviwala', 
               street: '1234 Fake Street', city: 'Houston',
               zip: '77777', state: 'TX', areaCode: '281',
-              phoneNumber: '1234567', userName: 'halal', 
+              phoneNumber: '1234567', password: 'password',
+              password_confirmation: 'password',  
               email: 'muhammad@gmail.com')
               
 #Admin Template
@@ -29,19 +31,22 @@ Admin.create!(firstName: 'Muhammad', lastName: 'Naviwala',
 Judge.create!(firstName: 'John', lastName: 'Smith', 
   street: '1234 Super Fake', city: 'Houston',
   zip: '12345', state: 'TX', areaCode: '713',
-  phoneNumber: '1234568', userName: 'Judge1', 
+  phoneNumber: '1234568', password: 'password',
+  password_confirmation: 'password',  
   email: 'judge1@judges.com') 
   
 Judge.create!(firstName: 'Paul', lastName: 'Smith', 
   street: '1234 Fake St Dr', city: 'Houston',
   zip: '77864', state: 'TX', areaCode: '284',
-  phoneNumber: '7392018', userName: 'Judge2', 
+  phoneNumber: '7392018', password: 'password',
+  password_confirmation: 'password', 
   email: 'judge2@judges.com') 
 
 Judge.create!(firstName: 'Guy', lastName: 'Pierce', 
   street: '8899 This Road', city: 'Houston',
   zip: '87643', state: 'TX', areaCode: '837',
-  phoneNumber: '8473982', userName: 'Judge3', 
+  phoneNumber: '8473982', password: 'password',
+  password_confirmation: 'password', 
   email: 'judge3@judges.com') 
   
 #Judge Template

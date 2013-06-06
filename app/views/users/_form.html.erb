@@ -10,7 +10,15 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="field">
+	  <!--useless field now-->
+    <%= f.label :userName %><br />
+    <%= f.text_field :userName %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
   <div class="field">
     <%= f.label :firstName %><br />
     <%= f.text_field :firstName %>
@@ -43,26 +51,7 @@
     <%= f.label :phoneNumber %><br />
     <%= f.number_field :phoneNumber %>
   </div>
-  <div class="field">
-    <%= f.label :passwordDigest %><br />
-    <%= f.text_field :passwordDigest %>
-  </div>
-  <div class="field">
-    <%= f.label :rememberToken %><br />
-    <%= f.text_field :rememberToken %>
-  </div>
-  <div class="field">
-    <%= f.label :userName %><br />
-    <%= f.text_field :userName %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :type %><br />
-    <%= f.text_field :type %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -9,13 +9,13 @@ class CreateUsers < ActiveRecord::Migration
       t.string :state
       t.integer :areaCode
       t.integer :phoneNumber
-      t.string :passwordDigest
-      t.string :rememberToken
+      #t.string :passwordDigest
+      #t.string :rememberToken
       t.string :userName
-      t.string :email
+      #t.string :email
       t.string :type
 
-      t.timestamps
+      #t.timestamps
     end
   end
 end
