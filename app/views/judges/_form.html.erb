@@ -13,7 +13,18 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+	<%= f.label :password %><br />
+	<%= f.password_field :password %>
+  </div>
+  <div class="field">
+	<%= f.label :password_confirmation %><br />
+	<%= f.password_field :password_confirmation %>
+  </div>
   <div class="field">
     <%= f.label :firstName %><br />
     <%= f.text_field :firstName %>
@@ -45,22 +56,6 @@
   <div class="field">
     <%= f.label :phoneNumber %><br />
     <%= f.number_field :phoneNumber %>
-  </div>
-  <div class="field">
-    <%= f.label :passwordDigest %><br />
-    <%= f.text_field :passwordDigest %>
-  </div>
-  <div class="field">
-    <%= f.label :rememberToken %><br />
-    <%= f.text_field :rememberToken %>
-  </div>
-  <div class="field">
-    <%= f.label :userName %><br />
-    <%= f.text_field :userName %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
   </div>
   <div class="field">
     <%= f.label :type %><br />

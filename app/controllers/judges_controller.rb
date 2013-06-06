@@ -1,4 +1,6 @@
 class JudgesController < ApplicationController
+  before_filter :authenticate_admin!
+  
   # GET /judges
   # GET /judges.json
   def index

@@ -2,7 +2,7 @@
 
 <table class = "table table-bordered table-striped">
   <tr>
-	<th>Username</th>
+  	<th>Email</th>
 	<th>First Name</th>
 	<th>Last Name</th>
 	<th>Street</th>
@@ -11,7 +11,6 @@
 	<th>Zip</th>
 	<th>Area Code</th>
 	<th>Phone Number</th>
-	<th>Email</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,7 +18,7 @@
 
 <% @judges.each do |judge| %>
   <tr>
-	<td><%= judge.userName %></td>
+  	<td><%= judge.email %></td>
 	<td><%= judge.firstName %></td>
 	<td><%= judge.lastName %></td>
 	<td><%= judge.street %></td>
@@ -28,7 +27,6 @@
 	<td><%= judge.zip %></td>
 	<td><%= judge.areaCode %></td>
 	<td><%= judge.phoneNumber %></td>
-	<td><%= judge.email %></td>
     <td><%= link_to 'Show', judge %></td>
     <td><%= link_to 'Edit', edit_judge_path(judge) %></td>
     <td><%= link_to 'Destroy', judge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -38,4 +36,4 @@
 
 <br />
 
-<%= link_to 'New Admin', new_judge_path %>
+<%= link_to 'New Judge', new_judge_path %>

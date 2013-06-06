@@ -23,6 +23,14 @@
     <%= f.text_field :lastName %>
   </div>
   <div class="field">
+	<%= f.label :password %><br />
+	<%= f.password_field :password %>
+  </div>
+  <div class="field">
+	<%= f.label :password_confirmation %><br />
+	<%= f.password_field :password_confirmation %>
+  </div>
+  <div class="field">
     <%= f.label :street %><br />
     <%= f.text_field :street %>
   </div>
@@ -45,14 +53,6 @@
   <div class="field">
     <%= f.label :phoneNumber %><br />
     <%= f.number_field :phoneNumber %>
-  </div>
-  <div class="field">
-    <%= f.label :passwordDigest %><br />
-    <%= f.text_field :passwordDigest %>
-  </div>
-  <div class="field">
-    <%= f.label :rememberToken %><br />
-    <%= f.text_field :rememberToken %>
   </div>
   <div class="field">
     <%= f.label :userName %><br />
