@@ -4,8 +4,24 @@
         <ul class="nav pull-right">
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "About", '/about' %></li>
-		  <li><%= link_to "Sign In", '/users/sign_in' %></li>
+		  
+		  <% if signed_in? %>
+		  <% if current_user.class == Admin %>
+		  	<li><%= link_to "Console", '/adminconsole/console' %></li>
+		  <% end %>
+		  
+		  <% if current_user.class == Judge %>
+		  	<li><%= link_to "Console", '/judgeconsole/console' %></li>
+		  <% end %>
+		  
+		  
+		  
 		  <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+		 
+		  
+		  <% else %>
+		  <li><%= link_to "Sign In", '/users/sign_in' %></li>
+		  <% end %>
 		  
         </ul>
   </div>

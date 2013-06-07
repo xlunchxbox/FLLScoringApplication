@@ -27,6 +27,8 @@ rails g controller sessions new create destroy
 
 rails g controller adminconsole 
 
+rails g controller judgeconsole
+
 =================
 Terminal Commands
 =================

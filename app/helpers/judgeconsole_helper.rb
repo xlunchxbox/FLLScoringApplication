@@ -1,0 +1,2 @@
+module JudgeconsoleHelper
+end

@@ -15,6 +15,8 @@ FLLApplication::Application.routes.draw do
   
   get "adminconsole/console"
   
+  get "judgeconsole/console"
+  
   
 
   match '/about', to: 'static_pages#about'
@@ -40,6 +42,16 @@ FLLApplication::Application.routes.draw do
   resources :users
   
   root to: 'static_pages#home'
+  
+  # devise_scope :admin do
+#     get "/login" => "adminconsole/console"
+#     delete "/logout" => "devise/sessions#destroy"
+#   end
+#   
+#   devise_scope :judge do
+#     get "/login" => "judgeconsole/console"
+#     delete "/logout" => "devise/sessions#destroy"
+#   end
 
 
 
