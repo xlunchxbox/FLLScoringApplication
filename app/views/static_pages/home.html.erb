@@ -18,17 +18,19 @@
               			<a href = "/corevalues"><h1 style="color:white">Core Values: Top 5 Teams</h1></a>
 			  <table class = "table table-bordered table-condensed pretty">
 			    <tr bgcolor="#FFFFFF">
-			      <th>Inspiration Total</th>
-			      <th>Team Work Total</th>
-			      <th>Gracious Professionalism Total</th>
-			      <th><%= sortableCV "coreValueTotal", "Core Value Total" %></th>
+					<th>Team #</th>
+					<th>Inspiration Total</th>
+					<th>Team Work Total</th>
+					<th>Gracious Professionalism Total</th>
+					<th>Core Value Total<%# sortableCV "coreValueTotal", "Core Value Total" %></th>
 			    </tr>
 
 			  <% @corevalues.take(5).each do |corevalue| %>
 			    <tr bgcolor="#FFFFFF">
-			      <td><%= corevalue.inspirationTotal %></td>
-			      <td><%= corevalue.teamworkTotal %></td>
-			      <td><%= corevalue.graciousProfessionalismTotal %></td>
+					<td><%= corevalue.teamNumber %></td>
+					<td><%= corevalue.inspirationTotal %></td>
+					<td><%= corevalue.teamworkTotal %></td>
+					<td><%= corevalue.graciousProfessionalismTotal %></td>
 			      <td><%= corevalue.coreValueTotal %></td>
 			    </tr>
 			  <% end %>
@@ -46,18 +48,20 @@
               <a href = "/projects"><h1 style="color:white">Project: Top 5 Teams</h1></a>
 			  <table class = "table table-bordered table-condensed  pretty">
 			    <tr bgcolor="#FFFFFF">
-			      <th>Research Total</th>
-			      <th>Innovative Solution Total</th>
-			      <th>Presentation Total</th>
-			      <th><%= sortableP "projectTotal", "Project Total" %></th>
+					<th>Team #</th>
+					<th>Research Total</th>
+					<th>Innovative Solution Total</th>
+					<th>Presentation Total</th>
+					<th>Project Total<%# sortableP "projectTotal", "Project Total" %></th>
 			    </tr>
 
 			  <% @projects.take(5).each do |project| %>
 			    <tr bgcolor="#FFFFFF">
-			      <td><%= project.researchTotal %></td>
-			      <td><%= project.innovativeSolutionTotal %></td>
-			      <td><%= project.presentationTotal %></td>
-			      <td><%= project.projectTotal %></td>
+					<td><%= project.teamNumber %></td>
+					<td><%= project.researchTotal %></td>
+					<td><%= project.innovativeSolutionTotal %></td>
+					<td><%= project.presentationTotal %></td>
+					<td><%= project.projectTotal %></td>
 			    </tr>
 			  <% end %>
 			  </table>
@@ -74,19 +78,20 @@
               <a href = "/robotdesigns"><h1 style="color:white">Robot Design: Top 5 Teams</h1></a>
 			  <table class = "table table-bordered table-condensed  pretty">
 			    <tr bgcolor="#FFFFFF">
-
-			      <th>Mechanical Design Total</th>
-			      <th>Programming Total</th>
-			      <th>Strategy/Innovation Total</th>
-			      <th><%= sortableRD "robotDesignTotal" , "Robot Design Total" %></th>
+					<th>Team #</th>
+					<th>Mechanical Design Total</th>
+					<th>Programming Total</th>
+					<th>Strategy/Innovation Total</th>
+					<th>Robot Design Total<%# sortableRD "robotDesignTotal" , "Robot Design Total" %></th>
 			    </tr>
 
 			  <% @robotdesigns.take(5).each do |robotdesign| %>
 			    <tr bgcolor="#FFFFFF">
-			      <td><%= robotdesign.mechanicalDesignTotal %></td>
-			      <td><%= robotdesign.programmingTotal %></td>
-			      <td><%= robotdesign.strategyInnovationTotal %></td>
-			      <td><%= robotdesign.robotDesignTotal %></td>
+					<td><%= robotdesign.teamNumber %></td>
+					<td><%= robotdesign.mechanicalDesignTotal %></td>
+					<td><%= robotdesign.programmingTotal %></td>
+					<td><%= robotdesign.strategyInnovationTotal %></td>
+					<td><%= robotdesign.robotDesignTotal %></td>
 			    </tr>
 			  <% end %>
 			  </table>
