@@ -1,5 +1,7 @@
 class JudgesController < ApplicationController
   before_filter :authenticate_admin!
+  # Only the admin can view all methods for judges
+  # so the judge can not see other judges list (and edit or show them)
   
   # GET /judges
   # GET /judges.json

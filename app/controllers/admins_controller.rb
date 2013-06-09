@@ -1,5 +1,6 @@
 class AdminsController < ApplicationController
   before_filter :authenticate_admin!
+  # Only the admin can see these methods
   
   # GET /admins
   # GET /admins.json
