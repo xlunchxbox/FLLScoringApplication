@@ -21,7 +21,7 @@ FLLApplication::Application.routes.draw do
 
   match '/about', to: 'static_pages#about'
   match '/help', to: 'static_pages#help'
-  
+  match '/home', to: 'static_pages#home'
 
   
   resources :robotdesigns
@@ -40,8 +40,19 @@ FLLApplication::Application.routes.draw do
 
 
   resources :users
+
+
+
+  # routes for devise START
+  # devise_scope :judges do
+  #   root :to => 'judgeconsole#console'
+  # end
+  # devise_scope :admins do
+  #   root :to => 'adminconsole#console'
+  # end
+  # routes for devise END
   
-  root to: 'static_pages#home'
+  root to: 'redirectuser#redirecting'
   
   # devise_scope :admin do
 #     get "/login" => "adminconsole/console"
