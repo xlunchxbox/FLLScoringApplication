@@ -1,4 +1,5 @@
 FLLApplication::Application.routes.draw do
+
   devise_for :users
   devise_for :admins
   devise_for :judges
@@ -17,6 +18,7 @@ FLLApplication::Application.routes.draw do
   
   get "judgeconsole/console"
   
+  get "search/searchresults"
   
 
   match '/about', to: 'static_pages#about'

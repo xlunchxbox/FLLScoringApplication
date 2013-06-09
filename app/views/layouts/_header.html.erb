@@ -1,28 +1,36 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-      <%= link_to "FLL Scoring Application", home_path, id: "logo" %>
-        <ul class="nav pull-right">
-          <li><%= link_to "Home", home_path %></li>
-          <li><%= link_to "About", '/about' %></li>
-		  
-		  <% if signed_in? %>
-		  <% if current_user.class == Admin %>
-		  	<li><%= link_to "Console", '/adminconsole/console' %></li>
-		  <% end %>
-		  
-		  <% if current_user.class == Judge %>
-		  	<li><%= link_to "Console", '/judgeconsole/console' %></li>
-		  <% end %>
-		  
-		  
-		  
-		  <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
-		 
-		  
-		  <% else %>
-		  <li><%= link_to "Sign In", '/users/sign_in' %></li>
-		  <% end %>
-		  
-        </ul>
-  </div>
+	<div class="navbar-inner">
+		<%= link_to "FLL Scoring Application", home_path, id: "logo" %>
+
+		<ul class="nav pull-right">
+
+			<!-- search from -->
+				<%= form_tag search_searchresults_path, :method => 'get', :class => "navbar-search pull-left" do %>
+				<%= text_field_tag :search, params[:search], :placeholder => "Search by team number...", :class =>"input-large search-query" %>
+				<% end %>
+			<!-- search from -->
+
+			<li><%= link_to "Home", home_path %></li>
+			<li><%= link_to "About", '/about' %></li>
+
+			<% if signed_in? %>
+			<% if current_user.class == Admin %>
+			<li><%= link_to "Console", '/adminconsole/console' %></li>
+			<% end %>
+
+			<% if current_user.class == Judge %>
+			<li><%= link_to "Console", '/judgeconsole/console' %></li>
+			<% end %>
+
+
+
+			<li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+
+
+			<% else %>
+			<li><%= link_to "Sign In", '/users/sign_in' %></li>
+			<% end %>
+
+		</ul>
+	</div>
 </header>
