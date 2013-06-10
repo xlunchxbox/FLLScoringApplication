@@ -146,7 +146,7 @@ Project.create!(teamNumber: '70105', problemIdentification: '3',
   presentationTotal: '7', projectTotal: '29')
   
 #robotdesin====================================================== 
-Robotdesign.create!(teamNumber: '56317', durability: '3',
+Robotdesign.create!(teamNumber: '20308', durability: '3',
   mechanicalEfficiency: '2', mechanization: '3', 
   programmingQuality: '4', programmingEfficiency: '2',     
   automationNavigation: '3', designProcess: '4', 
@@ -236,7 +236,7 @@ Robotdesign.create!(teamNumber: '48199', durability: '1',
 
 
 #corevalue====================================================== 
-  Corevalue.create!(teamNumber: '75332', discovery: '1', 
+  Corevalue.create!(teamNumber: '20308', discovery: '1', 
     teamSpirit: '2', integration: '4', effectiveness: '4',
     efficiency: '1', kidsDoTheWork: '1', inclusion: '2', 
     respect: '3', coopertition: '4', inspirationTotal: '7',
