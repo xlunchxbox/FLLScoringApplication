@@ -1,21 +1,27 @@
+<script type="text/javascript">
+    $(function(){
+       $('[rel="tooltip"]').tooltip();
+    });
+</script>
+
 <h1>Robot Design</h1>
 
 <table class = "table table-bordered table-striped table table-hover">
   <tr>
-    <th><%= sortable "teamNumber" , "Team #" %></th>
-    <th><%= sortable "durability" , "D" %></th>
-    <th><%= sortable "mechanicalEfficiency" , "ME" %></th>
-    <th><%= sortable "mechanization" , "M" %></th>
-    <th><%= sortable "programmingQuality" , "PQ" %></th>
-    <th><%= sortable "programmingEfficiency" , "PE" %></th>
-    <th><%= sortable "automationNavigation" , "AN" %></th>
-    <th><%= sortable "designProcess" , "DP" %></th>
-    <th><%= sortable "missionStrategy" , "MS" %></th>
-    <th><%= sortable "innovation" , "I" %></th>
-    <th><%= sortable "mechanicalDesignTotal" , "MDT" %></th>
-    <th><%= sortable "programmingTotal" , "PT" %></th>
-    <th><%= sortable "strategyInnovationTotal" , "S&IT" %></th>
-    <th><%= sortable "robotDesignTotal" , "RDT" %></th>
+    <th rel="tooltip" title="Team # "><%= sortable "teamNumber" , "Team #" %></th>
+    <th rel="tooltip" title="Durability"><%= sortable "durability" , "D" %></th>
+    <th rel="tooltip" title="Mechanical Efficiency"><%= sortable "mechanicalEfficiency" , "ME" %></th>
+    <th rel="tooltip" title="Mechanization"><%= sortable "mechanization" , "M" %></th>
+    <th rel="tooltip" title="Programming Quality"><%= sortable "programmingQuality" , "PQ" %></th>
+    <th rel="tooltip" title="Programming Efficiency"><%= sortable "programmingEfficiency" , "PE" %></th>
+    <th rel="tooltip" title="Automation Navigation"><%= sortable "automationNavigation" , "AN" %></th>
+    <th rel="tooltip" title="Design Process"><%= sortable "designProcess" , "DP" %></th>
+    <th rel="tooltip" title="Mission Strategy"><%= sortable "missionStrategy" , "MS" %></th>
+    <th rel="tooltip" title="Innovation"><%= sortable "innovation" , "I" %></th>
+    <th rel="tooltip" title="Mechanical Design Total"><%= sortable "mechanicalDesignTotal" , "MDT" %></th>
+    <th rel="tooltip" title="Programming Total"><%= sortable "programmingTotal" , "PT" %></th>
+    <th rel="tooltip" title="Strategy Innovation Total"><%= sortable "strategyInnovationTotal" , "S&IT" %></th>
+    <th rel="tooltip" title="Robot Design Total"><%= sortable "robotDesignTotal" , "RDT" %></th>
 	<% if signed_in? %>
 	    <th></th>
 	    <th></th>
@@ -53,4 +59,6 @@
 
 <br />
 
-<%= link_to 'New Robotdesign', new_robotdesign_path %>
+<% if signed_in? %>
+	<%= link_to 'New Robotdesign', new_robotdesign_path %>
+<% end %>

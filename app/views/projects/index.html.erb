@@ -1,22 +1,28 @@
-<h1>Projects</h1>
+<script type="text/javascript">
+    $(function(){
+       $('[rel="tooltip"]').tooltip();
+    });
+</script>
+
+<h1>Project</h1>
 
 <table class = "table table-bordered table-striped table table-hover">
   <tr>
-    <th><%= sortable "teamNumber","Team #" %></th>
-    <th><%= sortable "problemIdentification", "PI" %></th>
-    <th><%= sortable "sourcesOfInformation", "SOI" %></th>
-    <th><%= sortable "problemAnalysis", "PA" %></th>
-    <th><%= sortable "reviewExistingSolutions", "RES" %></th>
-    <th><%= sortable "teamSolution", "TS" %></th>
-    <th><%= sortable "innovation", "Inn" %></th>
-    <th><%= sortable "implementation", "Imp" %></th>
-    <th><%= sortable "sharing", "Sh" %></th>
-    <th><%= sortable "creativity", "C" %></th>
-    <th><%= sortable "presentationEffectiveness", "PE" %></th>
-    <th><%= sortable "researchTotal", "RT" %></th>
-    <th><%= sortable "innovativeSolutionTotal", "IT" %></th>
-    <th><%= sortable "presentationTotal", "P" %></th>
-    <th><%= sortable "projectTotal", "PT" %></th>
+    <th rel="tooltip" title="Team #"><%= sortable "teamNumber","Team #" %></th>
+    <th rel="tooltip" title="Problem Identification"><%= sortable "problemIdentification", "PI" %></th>
+    <th rel="tooltip" title="Sources of Information"><%= sortable "sourcesOfInformation", "SOI" %></th>
+    <th rel="tooltip" title="Problem Analysis"><%= sortable "problemAnalysis", "PA" %></th>
+    <th rel="tooltip" title="Review Existing Solutions"><%= sortable "reviewExistingSolutions", "RES" %></th>
+    <th rel="tooltip" title="Team Solution"><%= sortable "teamSolution", "TS" %></th>
+    <th rel="tooltip" title="Innovation"><%= sortable "innovation", "Inn" %></th>
+    <th rel="tooltip" title="Implementation"><%= sortable "implementation", "Imp" %></th>
+    <th rel="tooltip" title="Sharing"><%= sortable "sharing", "Sh" %></th>
+    <th rel="tooltip" title="creativity"><%= sortable "creativity", "C" %></th>
+    <th rel="tooltip" title="Presentation Effectiveness"><%= sortable "presentationEffectiveness", "PE" %></th>
+    <th rel="tooltip" title="Research Total"><%= sortable "researchTotal", "RT" %></th>
+    <th rel="tooltip" title="Innovative Solution Total"><%= sortable "innovativeSolutionTotal", "IT" %></th>
+    <th rel="tooltip" title="Presentation Total"><%= sortable "presentationTotal", "P" %></th>
+    <th rel="tooltip" title="Project Total"><%= sortable "projectTotal", "PT" %></th>
 	<% if signed_in? %>
 	    <th></th>
 	    <th></th>
@@ -55,4 +61,6 @@
 
 <br />
 
-<%= link_to 'New Project', new_project_path %>
+<% if signed_in? %>
+	<%= link_to 'New Project', new_project_path %>
+<% end %>
