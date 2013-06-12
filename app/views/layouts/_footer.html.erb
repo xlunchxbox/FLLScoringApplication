@@ -3,7 +3,12 @@
 		<%= link_to "Home", "/home" %> | 
 		<%= link_to "About", '/about' %> | 
 		<%= link_to "Help", '/help' %> | 
-		<%= link_to "Sign In", '/users/sign_in' %>
+		
+		<% if signed_in? %>
+			<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+		<% else %>
+			<%= link_to "Sign In", '/users/sign_in' %>
+		<% end %>
 	</center>
 	    <center> 
 			© 2013 Christopher Cruz & Muhammad Naviwala All rights reserved 			
