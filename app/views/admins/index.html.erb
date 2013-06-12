@@ -29,9 +29,12 @@
 	<td><%= admin.areaCode %></td>
 	<td><%= admin.phoneNumber %></td>
 	<td><%= admin.type %></td>
-    <td><%= link_to 'Show', admin %></td>
-    <td><%= link_to 'Edit', edit_admin_path(admin) %></td>
-    <td><%= link_to 'Destroy', admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <%# link_to 'Show', admin %>
+    <%# link_to 'Edit', edit_admin_path(admin) %>
+    <%# link_to 'Destroy', admin, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<td><%= link_to image_tag('show.png'), admin %></td>
+	<td><%= link_to image_tag('penciledit.png'), edit_admin_path(admin) %></td>
+	<td><%= link_to image_tag('delete.jpg'), admin, method: :delete, data: {confirm: 'Are you sure?'}%></td>
   </tr>
 <% end %>
 </table>
