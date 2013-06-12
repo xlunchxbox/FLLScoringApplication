@@ -8,20 +8,20 @@
 
 <table class = "table table-bordered table-striped table table-hover">
   <tr>
-    <th rel="tooltip" title="Team # "><%= sortable "teamNumber" , "Team #" %></th>
-    <th rel="tooltip" title="Durability"><%= sortable "durability" , "D" %></th>
-    <th rel="tooltip" title="Mechanical Efficiency"><%= sortable "mechanicalEfficiency" , "ME" %></th>
-    <th rel="tooltip" title="Mechanization"><%= sortable "mechanization" , "M" %></th>
-    <th rel="tooltip" title="Programming Quality"><%= sortable "programmingQuality" , "PQ" %></th>
-    <th rel="tooltip" title="Programming Efficiency"><%= sortable "programmingEfficiency" , "PE" %></th>
-    <th rel="tooltip" title="Automation Navigation"><%= sortable "automationNavigation" , "AN" %></th>
-    <th rel="tooltip" title="Design Process"><%= sortable "designProcess" , "DP" %></th>
-    <th rel="tooltip" title="Mission Strategy"><%= sortable "missionStrategy" , "MS" %></th>
-    <th rel="tooltip" title="Innovation"><%= sortable "innovation" , "I" %></th>
-    <th rel="tooltip" title="Mechanical Design Total"><%= sortable "mechanicalDesignTotal" , "MDT" %></th>
-    <th rel="tooltip" title="Programming Total"><%= sortable "programmingTotal" , "PT" %></th>
-    <th rel="tooltip" title="Strategy Innovation Total"><%= sortable "strategyInnovationTotal" , "S&IT" %></th>
-    <th rel="tooltip" title="Robot Design Total"><%= sortable "robotDesignTotal" , "RDT" %></th>
+    <th><%= tooltip (sortable "teamNumber" , "Team #") , { :tooltip => 'Team #' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "durability" , "D") , { :tooltip => 'Durability' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "mechanicalEfficiency" , "ME") , { :tooltip => 'Mechanical Efficiency' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "mechanization" , "M") , { :tooltip => 'Mechanization' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "programmingQuality" , "PQ") , { :tooltip => 'Programming Quality' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "programmingEfficiency" , "PE") , { :tooltip => 'Programming Efficiency' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "automationNavigation" , "AN") , { :tooltip => 'Automation/Navigation' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "designProcess" , "DP") , { :tooltip => 'Design Process' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "missionStrategy" , "MS") , { :tooltip => 'Mission Strategy' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "innovation" , "I") , { :tooltip => 'Innovation' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "mechanicalDesignTotal" , "MDT") , { :tooltip => 'Mechanical Design Total' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "programmingTotal" , "PT") , { :tooltip => 'Programming Total' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "strategyInnovationTotal" , "S&IT") , { :tooltip => 'Strategy & Innovation Total' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "robotDesignTotal" , "RDT") , { :tooltip => 'Robot Design Total' }, :rel => 'tooltip' %></th>
 	<% if signed_in? %>
 	    <th></th>
 	    <th></th>
@@ -60,5 +60,5 @@
 <br />
 
 <% if signed_in? %>
-	<%= link_to 'New Robotdesign', new_robotdesign_path %>
+	<%= link_to 'New Robot Design', new_robotdesign_path,rel: :tooltip , title: 'Create a new entry' %>
 <% end %>

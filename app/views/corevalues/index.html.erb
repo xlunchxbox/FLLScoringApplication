@@ -7,20 +7,20 @@
 <h1>Core Values</h1>
 <table class = "table table-bordered table-striped table table-hover">
   <tr>
-	<th rel="tooltip" title="Team #"><%= sortable "teamNumber", "Team #"%></th>
-    <th rel="tooltip" title="Discovery"><%= sortable "discovery", "D" %></th>
-    <th rel="tooltip" title="Team Spirit"><%= sortable "teamSpirit", "TS" %></th>
-    <th rel="tooltip" title="Integration"><%= sortable "integration", "Integ" %></th>
-    <th rel="tooltip" title="Effectiveness"><%= sortable "effectiveness", "Effec" %></th>
-    <th rel="tooltip" title="Efficiency"><%= sortable "efficiency", "Effic" %></th>
-    <th rel="tooltip" title="Kids Do The Work"><%= sortable "kidsDoTheWork", "KDTW" %></th>
-    <th rel="tooltip" title="Inclusion"><%= sortable "inclustion", "Inc" %></th>
-    <th rel="tooltip" title="Respect"><%= sortable "respect", "R" %></th>
-    <th rel="tooltip" title="Coopertition"><%= sortable "coopertition", "C" %></th>
-    <th rel="tooltip" title="Inspiration Total"><%= sortable "inspirationTotal", "IT" %></th>
-    <th rel="tooltip" title="Teamwork Total"><%= sortable "teamworkTotal", "TwT" %></th>
-    <th rel="tooltip" title="Gracious Professionalism Total"><%= sortable "graciousProfessionalismTotal", "GPT" %></th>
-    <th rel="tooltip" title="Core Value Total"><%= sortable "coreValueTotal", "CVT" %></th>
+	<th><%= tooltip (sortable "teamNumber", "Team #"), { :tooltip => 'Team #' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "discovery", "D"), { :tooltip => 'Discovery' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "teamSpirit", "TS"), { :tooltip => 'Team Spirit' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "integration", "Integ"), { :tooltip => 'Integration' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "effectiveness", "Effec"), { :tooltip => 'Effectiveness' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "efficiency", "Effic"), { :tooltip => 'Efficiency' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "kidsDoTheWork", "KDTW"), { :tooltip => 'Kids do the Work' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "inclustion", "Inc"), { :tooltip => 'Inclusion' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "respect", "R"), { :tooltip => 'Respect' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "coopertition", "C"), { :tooltip => 'Coopertition' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "inspirationTotal", "IT"), { :tooltip => 'Inspiration Total' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "teamworkTotal", "TwT"), { :tooltip => 'Teamwork Total' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "graciousProfessionalismTotal", "GPT"), { :tooltip => 'Gracious Professionalism Total' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "coreValueTotal", "CVT"), { :tooltip => 'Core Value Total' }, :rel => 'tooltip' %></th>
 	<% if signed_in? %>
 	    <th></th>
 	    <th></th>
