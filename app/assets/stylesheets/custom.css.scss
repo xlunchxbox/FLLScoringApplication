@@ -277,16 +277,17 @@ aside {
   *zoom: 1;
 }
 
+//Change carousel arrow visability on hover
 .carousel .carousel-control { visibility: hidden; }
 .carousel:hover .carousel-control { visibility: visible; }
 
-
+//change table hover color
 .table-hover tbody tr:hover > td,
 .table-hover tbody tr:hover > th {
   background-color: #Caf7F5;
 }
 
-
+//For editing the search bar
 .navbar-search .search-query {
   padding: 4px 14px;
   margin-bottom: 0;
@@ -297,4 +298,17 @@ aside {
   -webkit-border-radius: 15px;
      -moz-border-radius: 15px;
           border-radius: 15px;
+}
+
+//Change link & hover color on navbar
+.navbar .brand, .navbar .nav > li > a {
+    color: #FFFFFF;
+}
+.navbar .brand, .navbar .nav > li > a:hover {
+    color: #D64848;
+}
+
+//Align table data to the left, change th to target tag
+.table th {
+   text-align: left;   
 }

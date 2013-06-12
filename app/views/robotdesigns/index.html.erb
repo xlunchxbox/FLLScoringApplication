@@ -1,6 +1,6 @@
 <h1>Robot Design</h1>
 
-<table class = "table table-bordered table-striped table table-hover table-condensed">
+<table class = "table table-bordered table-striped table table-hover">
   <tr>
     <th><%= sortable "teamNumber" , "Team #" %></th>
     <th><%= sortable "durability" , "D" %></th>
@@ -16,9 +16,11 @@
     <th><%= sortable "programmingTotal" , "PT" %></th>
     <th><%= sortable "strategyInnovationTotal" , "S&IT" %></th>
     <th><%= sortable "robotDesignTotal" , "RDT" %></th>
-    <th></th>
-    <th></th>
-    <th></th>
+	<% if signed_in? %>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	<% end %>
   </tr>
 
 <% @robotdesigns.each do |robotdesign| %>
@@ -40,9 +42,11 @@
     <%# link_to 'Show', robotdesign %>
     <%# link_to 'Edit', edit_robotdesign_path(robotdesign) %>
     <%# link_to 'Destroy', robotdesign, method: :delete, data: { confirm: 'Are you sure?' } %>
-	<td><%= link_to image_tag('show.png'), robotdesign %></td>
-	<td><%= link_to image_tag('penciledit.png'), edit_robotdesign_path(robotdesign) %></td>
-	<td><%= link_to image_tag('delete.jpg'), robotdesign, method: :delete, data: {confirm: 'Are you sure?'}%></td>
+	<% if signed_in? %>
+		<td><%= link_to image_tag('show.png'), robotdesign %></td>
+		<td><%= link_to image_tag('penciledit.png'), edit_robotdesign_path(robotdesign) %></td>
+		<td><%= link_to image_tag('delete.jpg'), robotdesign, method: :delete, data: {confirm: 'Are you sure?'}%></td>
+	<% end %>
   </tr>
 <% end %>
 </table>

@@ -1,6 +1,6 @@
 <h1>Projects</h1>
 
-<table class = "table table-bordered table-striped table table-hover table-condensed">
+<table class = "table table-bordered table-striped table table-hover">
   <tr>
     <th><%= sortable "teamNumber","Team #" %></th>
     <th><%= sortable "problemIdentification", "PI" %></th>
@@ -17,9 +17,11 @@
     <th><%= sortable "innovativeSolutionTotal", "IT" %></th>
     <th><%= sortable "presentationTotal", "P" %></th>
     <th><%= sortable "projectTotal", "PT" %></th>
-    <th></th>
-    <th></th>
-    <th></th>
+	<% if signed_in? %>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	<% end %>
   </tr>
 
 <% @projects.each do |project| %>
@@ -42,9 +44,11 @@
     <%# link_to 'Show', project %>
     <%# link_to 'Edit', edit_project_path(project) %>
     <%# link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
-	<td><%= link_to image_tag('show.png'), project %></td>
-	<td><%= link_to image_tag('penciledit.png'), edit_project_path(project) %></td>
-	<td><%= link_to image_tag('delete.jpg'), project, method: :delete, data: {confirm: 'Are you sure?'}%></td>
+	<% if signed_in? %>
+		<td><%= link_to image_tag('show.png'), project %></td>
+		<td><%= link_to image_tag('penciledit.png'), edit_project_path(project) %></td>
+		<td><%= link_to image_tag('delete.jpg'), project, method: :delete, data: {confirm: 'Are you sure?'}%></td>
+	<% end %>
   </tr>
 <% end %>
 </table>
