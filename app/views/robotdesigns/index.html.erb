@@ -2,20 +2,20 @@
 
 <table class = "table table-bordered table-striped table table-hover table-condensed">
   <tr>
-    <th><%= sortable "teamNumber" , "Team Number" %></th>
-    <th><%= sortable "durability" , "Durability" %></th>
-    <th><%= sortable "mechanicalEfficiency" , "Mechanical Efficiency" %></th>
-    <th><%= sortable "mechanization" , "Mechanization" %></th>
-    <th><%= sortable "programmingQuality" , "Programming Quality" %></th>
-    <th><%= sortable "programmingEfficiency" , "Programming Efficiency" %></th>
-    <th><%= sortable "automationNavigation" , "Automation Navigation" %></th>
-    <th><%= sortable "designProcess" , "Design Process" %></th>
-    <th><%= sortable "missionStrategy" , "Mission Strategy" %></th>
-    <th><%= sortable "innovation" , "Innovation" %></th>
-    <th><%= sortable "mechanicalDesignTotal" , "Mechanical Design Total" %></th>
-    <th><%= sortable "programmingTotal" , "Programming Total" %></th>
-    <th><%= sortable "strategyInnovationTotal" , "Strategy & Innovation Total" %></th>
-    <th><%= sortable "robotDesignTotal" , "Robot Design Total" %></th>
+    <th><%= sortable "teamNumber" , "Team #" %></th>
+    <th><%= sortable "durability" , "D" %></th>
+    <th><%= sortable "mechanicalEfficiency" , "ME" %></th>
+    <th><%= sortable "mechanization" , "M" %></th>
+    <th><%= sortable "programmingQuality" , "PQ" %></th>
+    <th><%= sortable "programmingEfficiency" , "PE" %></th>
+    <th><%= sortable "automationNavigation" , "AN" %></th>
+    <th><%= sortable "designProcess" , "DP" %></th>
+    <th><%= sortable "missionStrategy" , "MS" %></th>
+    <th><%= sortable "innovation" , "I" %></th>
+    <th><%= sortable "mechanicalDesignTotal" , "MDT" %></th>
+    <th><%= sortable "programmingTotal" , "PT" %></th>
+    <th><%= sortable "strategyInnovationTotal" , "S&IT" %></th>
+    <th><%= sortable "robotDesignTotal" , "RDT" %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -37,9 +37,12 @@
     <td><%= robotdesign.programmingTotal %></td>
     <td><%= robotdesign.strategyInnovationTotal %></td>
     <td><%= robotdesign.robotDesignTotal %></td>
-    <td><%= link_to 'Show', robotdesign %></td>
-    <td><%= link_to 'Edit', edit_robotdesign_path(robotdesign) %></td>
-    <td><%= link_to 'Destroy', robotdesign, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <%# link_to 'Show', robotdesign %>
+    <%# link_to 'Edit', edit_robotdesign_path(robotdesign) %>
+    <%# link_to 'Destroy', robotdesign, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<td><%= link_to image_tag('show.png'), robotdesign %></td>
+	<td><%= link_to image_tag('penciledit.png'), edit_project_path(robotdesign) %></td>
+	<td><%= link_to image_tag('delete.jpg'), robotdesign, method: :delete, data: {confirm: 'Are you sure?'}%></td>
   </tr>
 <% end %>
 </table>

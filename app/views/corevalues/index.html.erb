@@ -1,20 +1,20 @@
 <h1>Core Values</h1>
 <table class = "table table-bordered table-striped table table-hover table-condensed">
   <tr>
-	<th><%= sortable "teamNumber", "Team Number" %></th>
-    <th><%= sortable "discovery", "Discovery" %></th>
-    <th><%= sortable "teamSpirit", "Team Spirit" %></th>
-    <th><%= sortable "integration", "Integration" %></th>
-    <th><%= sortable "effectiveness", "Effectiveness" %></th>
-    <th><%= sortable "efficiency", "Efficiency" %></th>
-    <th><%= sortable "kidsDoTheWork", "Kids Do The Work" %></th>
-    <th><%= sortable "inclustion", "Inclusion" %></th>
-    <th><%= sortable "respect", "Respect" %></th>
-    <th><%= sortable "coopertition", "Coopertition" %></th>
-    <th><%= sortable "inspirationTotal", "Inspiration Total" %></th>
-    <th><%= sortable "teamworkTotal", "Teamwork Total" %></th>
-    <th><%= sortable "graciousProfessionalismTotal", "Gracious Professionalism Total" %></th>
-    <th><%= sortable "coreValueTotal", "Core Value Total" %></th>
+	<th><%= sortable "teamNumber", "Team #" %></th>
+    <th><%= sortable "discovery", "D" %></th>
+    <th><%= sortable "teamSpirit", "TS" %></th>
+    <th><%= sortable "integration", "Integ" %></th>
+    <th><%= sortable "effectiveness", "Effec" %></th>
+    <th><%= sortable "efficiency", "Effic" %></th>
+    <th><%= sortable "kidsDoTheWork", "KDTW" %></th>
+    <th><%= sortable "inclustion", "Inc" %></th>
+    <th><%= sortable "respect", "R" %></th>
+    <th><%= sortable "coopertition", "C" %></th>
+    <th><%= sortable "inspirationTotal", "IT" %></th>
+    <th><%= sortable "teamworkTotal", "TwT" %></th>
+    <th><%= sortable "graciousProfessionalismTotal", "GPT" %></th>
+    <th><%= sortable "coreValueTotal", "CVT" %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -36,9 +36,12 @@
     <td><%= corevalue.teamworkTotal %></td>
     <td><%= corevalue.graciousProfessionalismTotal %></td>
     <td><%= corevalue.coreValueTotal %></td>
-    <td><%= link_to 'Show', corevalue %></td>
-    <td><%= link_to 'Edit', edit_corevalue_path(corevalue) %></td>
-    <td><%= link_to 'Destroy', corevalue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <%# link_to 'Show', corevalue %>
+    <%# link_to 'Edit', edit_corevalue_path(corevalue) %>
+    <%# link_to 'Destroy', corevalue, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<td><%= link_to image_tag('show.png'), corevalue %></td>
+	<td><%= link_to image_tag('penciledit.png'), edit_project_path(corevalue) %></td>
+	<td><%= link_to image_tag('delete.jpg'), corevalue, method: :delete, data: {confirm: 'Are you sure?'}%></td>
   </tr>
 <% end %>
 </table>

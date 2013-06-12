@@ -2,21 +2,21 @@
 
 <table class = "table table-bordered table-striped table table-hover table-condensed">
   <tr>
-    <th><%= sortable "teamNumber","Team Number" %></th>
-    <th><%= sortable "problemIdentification", "Problem Identification" %></th>
-    <th><%= sortable "sourcesOfInformation", "Sources of Information" %></th>
-    <th><%= sortable "problemAnalysis", "Problem Analysis" %></th>
-    <th><%= sortable "reviewExistingSolutions", "Review Existing Solutions" %></th>
-    <th><%= sortable "teamSolution", "Team Solution" %></th>
-    <th><%= sortable "innovation", "Innovation" %></th>
-    <th><%= sortable "implementation", "Implementation" %></th>
-    <th><%= sortable "sharing", "Sharing" %></th>
-    <th><%= sortable "creativity", "Creativity" %></th>
-    <th><%= sortable "presentationEffectiveness", "Presentation Effectiveness" %></th>
-    <th><%= sortable "researchTotal", "Research Total" %></th>
-    <th><%= sortable "innovativeSolutionTotal", "Innovative Solution Total" %></th>
-    <th><%= sortable "presentationTotal", "Presentation Total" %></th>
-    <th><%= sortable "projectTotal", "Project Total" %></th>
+    <th><%= sortable "teamNumber","Team #" %></th>
+    <th><%= sortable "problemIdentification", "PI" %></th>
+    <th><%= sortable "sourcesOfInformation", "SOI" %></th>
+    <th><%= sortable "problemAnalysis", "PA" %></th>
+    <th><%= sortable "reviewExistingSolutions", "RES" %></th>
+    <th><%= sortable "teamSolution", "TS" %></th>
+    <th><%= sortable "innovation", "Inn" %></th>
+    <th><%= sortable "implementation", "Imp" %></th>
+    <th><%= sortable "sharing", "Sh" %></th>
+    <th><%= sortable "creativity", "C" %></th>
+    <th><%= sortable "presentationEffectiveness", "PE" %></th>
+    <th><%= sortable "researchTotal", "RT" %></th>
+    <th><%= sortable "innovativeSolutionTotal", "IT" %></th>
+    <th><%= sortable "presentationTotal", "P" %></th>
+    <th><%= sortable "projectTotal", "PT" %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -39,9 +39,12 @@
     <td><%= project.innovativeSolutionTotal %></td>
     <td><%= project.presentationTotal %></td>
     <td><%= project.projectTotal %></td>
-    <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <%# link_to 'Show', project %>
+    <%# link_to 'Edit', edit_project_path(project) %>
+    <%# link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<td><%= link_to image_tag('show.png'), project %></td>
+	<td><%= link_to image_tag('penciledit.png'), edit_project_path(project) %></td>
+	<td><%= link_to image_tag('delete.jpg'), project, method: :delete, data: {confirm: 'Are you sure?'}%></td>
   </tr>
 <% end %>
 </table>
