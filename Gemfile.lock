@@ -34,9 +34,6 @@ GEM
     bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-x86-mingw32)
     bootstrap-sass (2.1.0.0)
-    bootstrap-tooltip-rails (0.1)
-      rails (>= 3.1)
-      thor
     bootstrap-will_paginate (0.0.9)
       will_paginate
     builder (3.0.4)
@@ -136,7 +133,6 @@ DEPENDENCIES
   annotate
   bcrypt-ruby
   bootstrap-sass (= 2.1)
-  bootstrap-tooltip-rails
   bootstrap-will_paginate
   coffee-rails (~> 3.2.1)
   devise
