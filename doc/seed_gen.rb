@@ -1,11 +1,16 @@
+#Application to generate seed test data for FLLScoringApplication rubrics
+
+#Generate a score from 1 - 4
 def scoreRand 
   rand(4) + 1
 end
 
+#Generate a random 1 - 6 digit team number
 def team_rand
   rand(99999) + 9999
 end
 
+#add up scores for project
 def add_totals_project(hold_scores)
   hold_scores[10] = hold_scores[0] + hold_scores[1] + hold_scores[2] + hold_scores[3]
   hold_scores[11] = hold_scores[4] + hold_scores[5] + hold_scores[6]
@@ -13,6 +18,7 @@ def add_totals_project(hold_scores)
   hold_scores[13] = hold_scores[10] + hold_scores[11] + hold_scores[12]
 end
 
+#add up scores for corevalues and robotdesign
 def add_totals_general(hold_scores)
   hold_scores[9] = hold_scores[0] + hold_scores[1] + hold_scores[2]
   hold_scores[10] = hold_scores[3] + hold_scores[4] + hold_scores[5]
@@ -20,6 +26,7 @@ def add_totals_general(hold_scores)
   hold_scores[12] = hold_scores[9] + hold_scores[10] + hold_scores[11]
 end
 
+#call scoreRand and store scores
 def randomize_score(hold_scores, size)
   for i in 0..size
     hold_scores[i] = scoreRand
@@ -88,6 +95,8 @@ end
 size = 100
 team_numbers = Array.new(size)
 hold_scores = Array.new(size)
+
+
 for i in 0..size
   team_numbers[i] = team_rand
 end

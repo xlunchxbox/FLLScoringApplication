@@ -1,20 +1,20 @@
 class CreateCorevalues < ActiveRecord::Migration
   def change
     create_table :corevalues do |t|
-      t.integer :discovery
-      t.integer :teamSpirit
-      t.integer :integration
-      t.integer :effectiveness
-      t.integer :efficiency
-      t.integer :kidsDoTheWork
-      t.integer :inclusion
-      t.integer :respect
-      t.integer :coopertition
-      t.integer :inspirationTotal
-      t.integer :teamworkTotal
-      t.integer :graciousProfessionalismTotal
-      t.integer :coreValueTotal
-      t.integer :teamNumber
+      t.integer :discovery, :null =>false
+      t.integer :teamSpirit, :null =>false
+      t.integer :integration, :null =>false
+      t.integer :effectiveness, :null =>false
+      t.integer :efficiency, :null =>false
+      t.integer :kidsDoTheWork, :null =>false
+      t.integer :inclusion, :null =>false
+      t.integer :respect, :null =>false
+      t.integer :coopertition, :null =>false
+      t.integer :inspirationTotal, :null =>false
+      t.integer :teamworkTotal, :null =>false
+      t.integer :graciousProfessionalismTotal, :null =>false
+      t.integer :coreValueTotal, :null =>false
+      t.integer :teamNumber, :null =>false
 
       t.timestamps
     end

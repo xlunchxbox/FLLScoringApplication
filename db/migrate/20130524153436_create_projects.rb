@@ -1,21 +1,21 @@
 class CreateProjects < ActiveRecord::Migration
   def change
     create_table :projects do |t|
-      t.integer :problemIdentification
-      t.integer :sourcesOfInformation
-      t.integer :problemAnalysis
-      t.integer :reviewExistingSolutions
-      t.integer :teamSolution
-      t.integer :innovation
-      t.integer :implementation
-      t.integer :sharing
-      t.integer :creativity
-      t.integer :presentationEffectiveness
-      t.integer :researchTotal
-      t.integer :innovativeSolutionTotal
-      t.integer :presentationTotal
-      t.integer :projectTotal
-      t.integer :teamNumber
+      t.integer :problemIdentification, :null =>false
+      t.integer :sourcesOfInformation, :null =>false
+      t.integer :problemAnalysis, :null =>false
+      t.integer :reviewExistingSolutions, :null =>false
+      t.integer :teamSolution, :null =>false
+      t.integer :innovation, :null =>false
+      t.integer :implementation, :null =>false
+      t.integer :sharing, :null =>false
+      t.integer :creativity, :null =>false
+      t.integer :presentationEffectiveness, :null =>false
+      t.integer :researchTotal, :null =>false
+      t.integer :innovativeSolutionTotal, :null =>false
+      t.integer :presentationTotal, :null =>false
+      t.integer :projectTotal, :null =>false
+      t.integer :teamNumber, :null =>false
 
       t.timestamps
     end

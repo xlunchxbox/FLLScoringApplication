@@ -2,7 +2,7 @@
 Rails G Commands for Users
 ==========================
 
-rails g scaffold User firstName:string lastName:string street:string city:string zip:integer state:string areaCode:integer phoneNumber:integer passwordDigest:string rememberToken:string userName:string email:string type:string
+rails g scaffold User first_name:string last_name:string street:string city:string zip:integer state:string area_code:integer phone_number:integer email:string type:string
 
 rails g scaffold Admin
 
@@ -11,20 +11,34 @@ rails g scaffold Judge
 ============================
 Rails G Commands for Rubrics
 ============================
-rails g scaffold Project teamNumber:integer problemIdentification:integer sourcesOfInformation:integer problemAnalysis:integer reviewExistingSolutions:integer teamSolution:integer innovation:integer implementation:integer sharing:integer creativity:integer presentationEffectiveness:integer researchTotal:integer innovativeSolutionTotal:integer presentationTotal:integer projectTotal:integer
+rails g scaffold Project team_number:integer problem_identification:integer sources_of_information:integer problem_analysis:integer review_existing_solutions:integer team_solution:integer innovation:integer implementation:integer sharing:integer creativity:integer presentation_effectiveness:integer research_total:integer innovative_solution_total:integer presentation_total:integer project_total:integer
 
-rails g scaffold Corevalues teamNumber:integer discovery:integer teamSpirit:integer integration:integer effectiveness:integer efficiency:integer kidsDoTheWork:integer inclusion:integer respect:integer coopertition:integer inspirationTotal:integer teamworkTotal:integer graciousProfessionalismTotal:integer coreValueTotal:integer 
+rails g scaffold Core_values team_number:integer discovery:integer team_spirit:integer integration:integer effectiveness:integer efficiency:integer kids_do_the_work:integer inclusion:integer respect:integer coopertition:integer inspiration_total:integer teamwork_total:integer gracious_professionalism_total:integer core_value_total:integer 
 
-rails g scaffold Robotdesign teamNumber:integer durability:integer mechanicalEfficiency:integer mechanization:integer programmingQuality:integer programmingEfficiency:integer automationNavigation:integer designProcess:integer missionStrategy:integer innovation:integer mechanicalDesignTotal:integer programmingTotal:integer strategyInnovationTotal:integer robotDesignTotal:integer 
+rails g scaffold Robot_design team_number:integer durability:integer mechanical_efficiency:integer mechanization:integer programming_quality:integer programming_efficiency:integer automation_navigation:integer design_process:integer mission_strategy:integer innovation:integer mechanical_design_total:integer programming_total:integer strategy_innovation_total:integer robot_design_total:integer 
 
 ================================
 Rails G Commands for Controllers
 ================================
 
-rails g controller static_pages home about 
+rails g controller static_pages home about help
 
-rails g controller sessions new create destroy
+rails g controller adminconsole console
 
-rails g controller adminconsole 
+rails g controller judgeconsole console
 
-rails g controller judgeconsole
+===============
+devise commands
+===============
+
+rails generate devise:install
+
+rails generate devise User
+
+rails generate devise:views
+
+=================
+Terminal Commands
+=================
+rake db:drop && rake db:create && rake db:migrate && rake db:seed
+
