@@ -1,36 +1,33 @@
-==========================
-Rails G Commands for Users
-==========================
+FLL Scoring Application is a fully contained web application. 
 
-rails g scaffold User firstName:string lastName:string street:string city:string zip:integer state:string areaCode:integer phoneNumber:integer passwordDigest:string rememberToken:string userName:string email:string type:string
+Requirements:
+	RVM (not required but recommended for Ruby installations)
+	Ruby 1.9.3
+	Rails 3.2.13
+	Being comfortable with using the terminal
+	Works best in Safari/Chrome
+	
+	There are windows instructions in the doc folder
+	Mac instructions:
+	http://www.shanison.com/2011/02/20/how-to-install-rvm-on-mac/
 
-rails g scaffold Admin
+	The Scoring Application can also be run using an IDE such as Ruby Mine.
 
-rails g scaffold Judge
 
-============================
-Rails G Commands for Rubrics
-============================
-rails g scaffold Project teamNumber:integer problemIdentification:integer sourcesOfInformation:integer problemAnalysis:integer reviewExistingSolutions:integer teamSolution:integer innovation:integer implementation:integer sharing:integer creativity:integer presentationEffectiveness:integer researchTotal:integer innovativeSolutionTotal:integer presentationTotal:integer projectTotal:integer
-
-rails g scaffold Corevalues teamNumber:integer discovery:integer teamSpirit:integer integration:integer effectiveness:integer efficiency:integer kidsDoTheWork:integer inclusion:integer respect:integer coopertition:integer inspirationTotal:integer teamworkTotal:integer graciousProfessionalismTotal:integer coreValueTotal:integer 
-
-rails g scaffold Robotdesign teamNumber:integer durability:integer mechanicalEfficiency:integer mechanization:integer programmingQuality:integer programmingEfficiency:integer automationNavigation:integer designProcess:integer missionStrategy:integer innovation:integer mechanicalDesignTotal:integer programmingTotal:integer strategyInnovationTotal:integer robotDesignTotal:integer 
-
-================================
-Rails G Commands for Controllers
-================================
-
-rails g controller static_pages home about 
-
-rails g controller sessions new create destroy
-
-rails g controller adminconsole 
-
-rails g controller judgeconsole
 
 =================
 Terminal Commands
 =================
-rake db:drop && rake db:create && rake db:migrate && rake db:seed
+Once everything is installed, launch two terminal windows. In one window type "rails s" this will start the web server for the website.
 
+	In the other window type these commands:
+
+	rake db:drop	*This will drop any databases*
+	rake db:create 	*This will create a new database*
+	rake db:migrate *This will migrate the database*
+	rake db:seed	*This will seed the database with default values*
+
+=================
+Known Bugs/Issues
+=================
+Destroy is not working with user authentication
