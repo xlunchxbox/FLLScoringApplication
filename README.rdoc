@@ -11,14 +11,14 @@ Requirements:
 	Mac instructions:
 	http://www.shanison.com/2011/02/20/how-to-install-rvm-on-mac/
 
-	The Scoring Application can also be run using an IDE such as Ruby Mine.
+	The Scoring Application can also be run using an IDE such as Ruby Mine & Aptana.
 
 
 
 =================
 Terminal Commands
 =================
-Once everything is installed, launch two terminal windows. In one window type "rails s" this will start the web server for the website.
+Once everything is installed, launch two terminal windows and navigate to the FLLScoringApplication folder. In one window type "rails s" this will start the web server for the website.
 
 	In the other window type these commands:
 
@@ -31,3 +31,4 @@ Once everything is installed, launch two terminal windows. In one window type "r
 Known Bugs/Issues
 =================
 Destroy is not working with user authentication
+Does not display well Internet Explorer 
