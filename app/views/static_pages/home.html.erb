@@ -6,105 +6,191 @@
 	<title>Carousel Template</title>
 	<link href="bootstrap.css" rel="stylesheet">
 	<link href="bootstrap-responsive.css" rel="stylesheet">
-	<link href="custom.css" rel="stylesheet">	
+	<link href="custom.css" rel="stylesheet">
+	<script src="http://threedubmedia.com/inc/js/jquery.event.drag-2.2.js"></script>
+	<script src="http://threedubmedia.com/inc/js/jquery.event.drag.live-2.2.js"></script>
+	<script src="http://threedubmedia.com/inc/js/jquery.event.drop-2.2.js"></script>
+	<script src="http://threedubmedia.com/inc/js/jquery.event.drop.live-2.2.js"></script>
+	
 </head>
 <body>
+
+	<!--  Old Carousel Start
 	<div id="myCarousel" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="item active">
+	  <div class="carousel-inner">
+		<div class="item active">
 
-          <center><%= image_tag("slide1.png")%></center>
-          <div class="container">
-            <div class="carousel-caption">
+		  <center><#= image_tag("slide1.png")%></center>
+		  <div class="container">
+			<div class="carousel-caption">
 
-              			<a href = "/corevalues"><h1 style="color:white">Core Values: Top 5 Teams</h1></a>
+						<a href = "/corevalues"><h1 style="color:white">Core Values: Top 5 Teams</h1></a>
 			  <table class = "table table-bordered table-condensed pretty">
-			    <tr bgcolor="#FFFFFF">
+				<tr bgcolor="#FFFFFF">
 					<th>Team #</th>
 					<th>Inspiration Total</th>
 					<th>Team Work Total</th>
 					<th>Gracious Professionalism Total</th>
-					<th>Core Value Total<%# sortableCV "coreValueTotal", "Core Value Total" %></th>
-			    </tr>
+					<th>Core Value Total<## sortableCV "coreValueTotal", "Core Value Total" %></th>
+				</tr>
 
-			  <% @corevalues.take(5).each do |corevalue| %>
-			    <tr bgcolor="#FFFFFF">
-					<td><%= corevalue.teamNumber %></td>
-					<td><%= corevalue.inspirationTotal %></td>
-					<td><%= corevalue.teamworkTotal %></td>
-					<td><%= corevalue.graciousProfessionalismTotal %></td>
-			      <td><%= corevalue.coreValueTotal %></td>
-			    </tr>
-			  <% end %>
+			  <# @corevalues.take(5).each do |corevalue| %>
+				<tr bgcolor="#FFFFFF">
+					<td><#= corevalue.teamNumber %></td>
+					<td><#= corevalue.inspirationTotal %></td>
+					<td><#= corevalue.teamworkTotal %></td>
+					<td><#= corevalue.graciousProfessionalismTotal %></td>
+				  <td><#= corevalue.coreValueTotal %></td>
+				</tr>
+			  <# end %>
 			  </table>
 			  
 			  
 			  
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <center><%= image_tag("slide1.png") %></center>
-          <div class="container">
-            <div class="carousel-caption">
-              <a href = "/projects"><h1 style="color:white">Project: Top 5 Teams</h1></a>
+			</div>
+		  </div>
+		</div>
+		<div class="item">
+		  <center><#= image_tag("slide1.png") %></center>
+		  <div class="container">
+			<div class="carousel-caption">
+			  <a href = "/projects"><h1 style="color:white">Project: Top 5 Teams</h1></a>
 			  <table class = "table table-bordered table-condensed  pretty">
-			    <tr bgcolor="#FFFFFF">
+				<tr bgcolor="#FFFFFF">
 					<th>Team #</th>
 					<th>Research Total</th>
 					<th>Innovative Solution Total</th>
 					<th>Presentation Total</th>
-					<th>Project Total<%# sortableP "projectTotal", "Project Total" %></th>
-			    </tr>
+					<th>Project Total<## sortableP "projectTotal", "Project Total" %></th>
+				</tr>
+
+			  <# @projects.take(5).each do |project| %>
+				<tr bgcolor="#FFFFFF">
+					<td><#= project.teamNumber %></td>
+					<td><#= project.researchTotal %></td>
+					<td><#= project.innovativeSolutionTotal %></td>
+					<td><#= project.presentationTotal %></td>
+					<td><#= project.projectTotal %></td>
+				</tr>
+			  <# end %>
+			  </table>
+
+			</div>
+		  </div>
+		</div>
+		
+		
+		<div class="item">
+		  <center><#= image_tag("slide1.png") %></center>
+		  <div class="container">
+			<div class="carousel-caption">
+			  <a href = "/robotdesigns"><h1 style="color:white">Robot Design: Top 5 Teams</h1></a>
+			  <table class = "table table-bordered table-condensed  pretty">
+				<tr bgcolor="#FFFFFF">
+					<th>Team #</th>
+					<th>Mechanical Design Total</th>
+					<th>Programming Total</th>
+					<th>Strategy/Innovation Total</th>
+					<th>Robot Design Total<## sortableRD "robotDesignTotal" , "Robot Design Total" %></th>
+				</tr>
+
+			  <# @robotdesigns.take(5).each do |robotdesign| %>
+				<tr bgcolor="#FFFFFF">
+					<td><#= robotdesign.teamNumber %></td>
+					<td><#= robotdesign.mechanicalDesignTotal %></td>
+					<td><#= robotdesign.programmingTotal %></td>
+					<td><#= robotdesign.strategyInnovationTotal %></td>
+					<td><#= robotdesign.robotDesignTotal %></td>
+				</tr>
+			  <# end %>
+			  </table>
+			  
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+	  <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+	</div>
+	<!-- /.carousel -->
+
+	<!-- Old Carousel End-->
+
+
+
+	<!-- Round about carousel start -->
+	<ul id="roundabout_carousel">
+		<li>
+			<table class = "table table-bordered table-condensed pretty">
+				<th style="background-color:#70709F" colspan="5"><a href = "/corevalues"><h1>Core Values: Top 5 Teams</h1></a></th>
+				<tr bgcolor="#9090B4">
+					<th>Team #</th>
+					<th>Inspiration Total</th>
+					<th>Team Work Total</th>
+					<th>Gracious Professionalism Total</th>
+					<th>Core Value Total</th>
+				</tr>
+
+				<% @corevalues.take(5).each do |corevalue| %>
+				<tr bgcolor="#9090B4">
+					<td><%= corevalue.teamNumber %></td>
+					<td><%= corevalue.inspirationTotal %></td>
+					<td><%= corevalue.teamworkTotal %></td>
+					<td><%= corevalue.graciousProfessionalismTotal %></td>
+					<td><%= corevalue.coreValueTotal %></td>
+				</tr>
+				<% end %>
+			</table>
+		</li>
+
+		<li>
+			<table class = "table table-bordered table-condensed pretty">
+				<th style="background-color:#FF944D" colspan="5"><a href = "/corevalues"><h1>Project: Top 5 Teams</h1></a></th>
+				<tr bgcolor="#FFB280">
+					<th>Team #</th>
+					<th>Research Total</th>
+					<th>Innovative Solution Total</th>
+					<th>Presentation Total</th>
+					<th>Project Total</th>
+				</tr>
 
 			  <% @projects.take(5).each do |project| %>
-			    <tr bgcolor="#FFFFFF">
+				<tr bgcolor="#FFB280">
 					<td><%= project.teamNumber %></td>
 					<td><%= project.researchTotal %></td>
 					<td><%= project.innovativeSolutionTotal %></td>
 					<td><%= project.presentationTotal %></td>
 					<td><%= project.projectTotal %></td>
-			    </tr>
+				</tr>
 			  <% end %>
-			  </table>
+			</table>
+		</li>
 
-            </div>
-          </div>
-        </div>
-		
-		
-        <div class="item">
-          <center><%= image_tag("slide1.png") %></center>
-          <div class="container">
-            <div class="carousel-caption">
-              <a href = "/robotdesigns"><h1 style="color:white">Robot Design: Top 5 Teams</h1></a>
-			  <table class = "table table-bordered table-condensed  pretty">
-			    <tr bgcolor="#FFFFFF">
+		<li>
+			<table class = "table table-bordered table-condensed pretty">
+				<th style="background-color:#93E6E6" colspan="5"><a href = "/corevalues"><h1>Robot Design: Top 5 Teams</h1></a></th>
+				<tr bgcolor="#A3FFFF">
 					<th>Team #</th>
 					<th>Mechanical Design Total</th>
 					<th>Programming Total</th>
 					<th>Strategy/Innovation Total</th>
-					<th>Robot Design Total<%# sortableRD "robotDesignTotal" , "Robot Design Total" %></th>
-			    </tr>
+					<th>Robot Design Total</th>
+				</tr>
 
 			  <% @robotdesigns.take(5).each do |robotdesign| %>
-			    <tr bgcolor="#FFFFFF">
+				<tr bgcolor="#A3FFFF">
 					<td><%= robotdesign.teamNumber %></td>
 					<td><%= robotdesign.mechanicalDesignTotal %></td>
 					<td><%= robotdesign.programmingTotal %></td>
 					<td><%= robotdesign.strategyInnovationTotal %></td>
 					<td><%= robotdesign.robotDesignTotal %></td>
-			    </tr>
+				</tr>
 			  <% end %>
-			  </table>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div><!-- /.carousel -->
+			</table>
+		</li>
+		
+	</ul>
+	<!-- Round about carousel end-->
 	
 	<center>
 		<div class="btn-group">
@@ -117,5 +203,18 @@
 			<form action = "/projects"><button class="btn btn-custom-blue">Project</button></form>
 		</div>
 	</center>
+
+
+	<script>
+	$(document).ready(function() {
+		$('ul#roundabout_carousel').roundabout({
+			autoplay: true,
+			autoplayDuration: 4000,
+			enableDrag: true,
+			autoplayPauseOnHover: true
+		});
+	});
+	</script>
+
 </body>
 </html>

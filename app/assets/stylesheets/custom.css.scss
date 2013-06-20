@@ -348,5 +348,37 @@ aside {
 }
 
 
+/************************************* Round about carousel start *************************************/
+#roundabout_carousel {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 672px;
+  height: 448px;
+}
 
+#roundabout_carousel li {
+  height: 384px;
+  width: 704px;
+  text-align: center;
+  cursor: pointer;
+}
 
+#roundabout_carousel li img {
+  width: 100%;
+}
+
+#roundabout_carousel li.roundabout-in-focus {
+  cursor: default;
+}
+
+#roundabout_carousel li span {
+  display: block;
+  padding-top: 96px;
+}
+
+#rounabout_heading {
+  colspan: 5;
+  color: 'red'
+}
+/************************************* Round about carousel end *************************************/
