@@ -1,7 +1,7 @@
 class RobotdesignsController < ApplicationController
   # GET /robotdesigns
   # GET /robotdesigns.json
-  before_filter :authenticate_user!, :except => [:show, :index]
+  before_filter :authenticate_user!, :except => [:show, :index, :destroy]
   helper_method :sort_column, :sort_direction
   
   def index
