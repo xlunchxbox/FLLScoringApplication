@@ -1,5 +1,7 @@
 FLLApplication::Application.routes.draw do
 
+  get "console/console"
+
   devise_for :users
   devise_for :admins
   devise_for :judges

@@ -27,6 +27,8 @@ rails g controller adminconsole console
 
 rails g controller judgeconsole console
 
+rails g controller console admin judge
+
 ===============
 devise commands
 ===============
