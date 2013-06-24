@@ -43,40 +43,40 @@ ActiveRecord::Schema.define(:version => 20130524153448) do
   end
 
   create_table "projects", :force => true do |t|
-    t.integer  "problemIdentification"
-    t.integer  "sourcesOfInformation"
-    t.integer  "problemAnalysis"
-    t.integer  "reviewExistingSolutions"
-    t.integer  "teamSolution"
-    t.integer  "innovation"
-    t.integer  "implementation"
-    t.integer  "sharing"
-    t.integer  "creativity"
-    t.integer  "presentationEffectiveness"
-    t.integer  "researchTotal"
-    t.integer  "innovativeSolutionTotal"
-    t.integer  "presentationTotal"
-    t.integer  "projectTotal"
-    t.integer  "teamNumber"
+    t.integer  "problemIdentification",     :null => false
+    t.integer  "sourcesOfInformation",      :null => false
+    t.integer  "problemAnalysis",           :null => false
+    t.integer  "reviewExistingSolutions",   :null => false
+    t.integer  "teamSolution",              :null => false
+    t.integer  "innovation",                :null => false
+    t.integer  "implementation",            :null => false
+    t.integer  "sharing",                   :null => false
+    t.integer  "creativity",                :null => false
+    t.integer  "presentationEffectiveness", :null => false
+    t.integer  "researchTotal",             :null => false
+    t.integer  "innovativeSolutionTotal",   :null => false
+    t.integer  "presentationTotal",         :null => false
+    t.integer  "projectTotal",              :null => false
+    t.integer  "teamNumber",                :null => false
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
   end
 
   create_table "robotdesigns", :force => true do |t|
-    t.integer  "durability"
-    t.integer  "mechanicalEfficiency"
-    t.integer  "mechanization"
-    t.integer  "programmingQuality"
-    t.integer  "programmingEfficiency"
-    t.integer  "automationNavigation"
-    t.integer  "designProcess"
-    t.integer  "missionStrategy"
-    t.integer  "innovation"
-    t.integer  "mechanicalDesignTotal"
-    t.integer  "programmingTotal"
-    t.integer  "strategyInnovationTotal"
-    t.integer  "robotDesignTotal"
-    t.integer  "teamNumber"
+    t.integer  "durability",              :null => false
+    t.integer  "mechanicalEfficiency",    :null => false
+    t.integer  "mechanization",           :null => false
+    t.integer  "programmingQuality",      :null => false
+    t.integer  "programmingEfficiency",   :null => false
+    t.integer  "automationNavigation",    :null => false
+    t.integer  "designProcess",           :null => false
+    t.integer  "missionStrategy",         :null => false
+    t.integer  "innovation",              :null => false
+    t.integer  "mechanicalDesignTotal",   :null => false
+    t.integer  "programmingTotal",        :null => false
+    t.integer  "strategyInnovationTotal", :null => false
+    t.integer  "robotDesignTotal",        :null => false
+    t.integer  "teamNumber",              :null => false
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false
   end
