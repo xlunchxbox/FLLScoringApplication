@@ -1,0 +1,56 @@
+# == Schema Information
+#
+# Table name: corevalues
+#
+#  id                           :integer          not null, primary key
+#  discovery                    :integer          not null
+#  teamSpirit                   :integer          not null
+#  integration                  :integer          not null
+#  effectiveness                :integer          not null
+#  efficiency                   :integer          not null
+#  kidsDoTheWork                :integer          not null
+#  inclusion                    :integer          not null
+#  respect                      :integer          not null
+#  coopertition                 :integer          not null
+#  inspirationTotal             :integer          not null
+#  teamworkTotal                :integer          not null
+#  graciousProfessionalismTotal :integer          not null
+#  coreValueTotal               :integer          not null
+#  teamNumber                   :integer          not null
+#  created_at                   :datetime         not null
+#  updated_at                   :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  discovery: 1
+  teamSpirit: 1
+  integration: 1
+  effectiveness: 1
+  efficiency: 1
+  kidsDoTheWork: 1
+  inclusion: 1
+  respect: 1
+  coopertition: 1
+  inspirationTotal: 1
+  teamworkTotal: 1
+  graciousProfessionalismTotal: 1
+  coreValueTotal: 1
+  teamNumber: 1
+
+two:
+  discovery: 1
+  teamSpirit: 1
+  integration: 1
+  effectiveness: 1
+  efficiency: 1
+  kidsDoTheWork: 1
+  inclusion: 1
+  respect: 1
+  coopertition: 1
+  inspirationTotal: 1
+  teamworkTotal: 1
+  graciousProfessionalismTotal: 1
+  coreValueTotal: 1
+  teamNumber: 1

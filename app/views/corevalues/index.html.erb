@@ -1,0 +1,62 @@
+<script type="text/javascript">
+    $(function(){
+       $('[rel="tooltip"]').tooltip();
+    });
+</script>
+
+<h1>Core Values</h1>
+<table class = "table table-bordered table-striped table table-hover pretty">
+  <tr>
+	<th><%= tooltip (sortable "teamNumber", "Team #"), { :tooltip => 'Team #' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "discovery", "D"), { :tooltip => 'Discovery' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "teamSpirit", "TS"), { :tooltip => 'Team Spirit' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "integration", "Integ"), { :tooltip => 'Integration' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "effectiveness", "Effec"), { :tooltip => 'Effectiveness' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "efficiency", "Effic"), { :tooltip => 'Efficiency' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "kidsDoTheWork", "KDTW"), { :tooltip => 'Kids do the Work' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "inclustion", "Inc"), { :tooltip => 'Inclusion' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "respect", "R"), { :tooltip => 'Respect' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "coopertition", "C"), { :tooltip => 'Coopertition' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "inspirationTotal", "IT"), { :tooltip => 'Inspiration Total' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "teamworkTotal", "TwT"), { :tooltip => 'Teamwork Total' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "graciousProfessionalismTotal", "GPT"), { :tooltip => 'Gracious Professionalism Total' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "coreValueTotal", "CVT"), { :tooltip => 'Core Value Total' }, :rel => 'tooltip' %></th>
+	<% if signed_in? %>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	<% end %>
+  </tr>
+<% @corevalues.each do |corevalue| %>
+  <tr>
+    <td><%= corevalue.teamNumber %></td>
+    <td><%= corevalue.discovery %></td>
+    <td><%= corevalue.teamSpirit %></td>
+    <td><%= corevalue.integration %></td>
+    <td><%= corevalue.effectiveness %></td>
+    <td><%= corevalue.efficiency %></td>
+    <td><%= corevalue.kidsDoTheWork %></td>
+    <td><%= corevalue.inclusion %></td>
+    <td><%= corevalue.respect %></td>
+    <td><%= corevalue.coopertition %></td>
+    <td><%= corevalue.inspirationTotal %></td>
+    <td><%= corevalue.teamworkTotal %></td>
+    <td><%= corevalue.graciousProfessionalismTotal %></td>
+    <td><%= corevalue.coreValueTotal %></td>
+    <%# link_to 'Show', corevalue %>
+    <%# link_to 'Edit', edit_corevalue_path(corevalue) %>
+    <%# link_to 'Destroy', corevalue, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<% if signed_in? %>
+		<td><%= link_to image_tag('show.png'), corevalue %></td>
+		<td><%= link_to image_tag('penciledit.png'), edit_corevalue_path(corevalue) %></td>
+		<td><%= link_to image_tag('delete.jpg'), corevalue, method: :delete, data: {confirm: 'Are you sure?'}%></td>
+	<% end %>
+  </tr>
+<% end %>
+</table>
+<br />
+
+<% if signed_in? %>
+	<%= link_to 'New Corevalue', new_corevalue_path,rel: :tooltip , title: 'Create a new entry'%>
+<% end %>
+
