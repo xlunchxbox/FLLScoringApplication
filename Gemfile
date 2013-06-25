@@ -11,9 +11,6 @@ gem 'jquery-rails'
 gem 'bcrypt-ruby'
 gem 'thin'
 gem 'devise'
-gem 'less-rails'
-gem 'twitter-bootstrap-rails'
-gem 'therubyracer'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
