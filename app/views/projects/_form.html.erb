@@ -14,28 +14,28 @@
     </div>
   <% end %>
   <div class="field">
-    <%= f.label :teamNumber %><br />
-    <%= f.number_field :teamNumber %>
+    <%= f.label :team_number %><br />
+    <%= f.number_field :team_number %>
   </div>
   <div class="field">
-    <%= f.label :problemIdentification %><br />
-    <%= f.select :problemIdentification, options_for_select([1,2,3,4])%>
+    <%= f.label :problem_identification %><br />
+    <%= f.select :problem_identification, options_for_select([1,2,3,4])%>
   </div>
   <div class="field">
-    <%= f.label :sourcesOfInformation %><br />
-    <%= f.select :sourcesOfInformation, options_for_select([1,2,3,4])%>
+    <%= f.label :sources_of_information %><br />
+    <%= f.select :sources_of_information, options_for_select([1,2,3,4])%>
   </div>
   <div class="field">
-    <%= f.label :problemAnalysis %><br />
-    <%= f.select :problemAnalysis, options_for_select([1,2,3,4])%>
+    <%= f.label :problem_analysis %><br />
+    <%= f.select :problem_analysis, options_for_select([1,2,3,4])%>
   </div>
   <div class="field">
-    <%= f.label :reviewExistingSolutions %><br />
-    <%= f.select :reviewExistingSolutions, options_for_select([1,2,3,4])%>
+    <%= f.label :review_existing_solutions %><br />
+    <%= f.select :review_existing_solutions, options_for_select([1,2,3,4])%>
   </div>
   <div class="field">
-    <%= f.label :teamSolution %><br />
-    <%= f.select :teamSolution, options_for_select([1,2,3,4])%>
+    <%= f.label :team_solution %><br />
+    <%= f.select :team_solution, options_for_select([1,2,3,4])%>
   </div>
   <div class="field">
     <%= f.label :innovation %><br />
@@ -54,24 +54,8 @@
     <%= f.select :creativity, options_for_select([1,2,3,4])%>
   </div>
   <div class="field">
-    <%= f.label :presentationEffectiveness %><br />
-    <%= f.select :presentationEffectiveness, options_for_select([1,2,3,4])%>
-  </div>
-  <div class="field">
-    <%# f.label :researchTotal %>
-    <%# f.select :researchTotal, options_for_select([1,2,3,4])%>
-  </div>
-  <div class="field">
-    <%# f.label :innovativeSolutionTotal %>
-    <%# f.select :innovativeSolutionTotal, options_for_select([1,2,3,4])%>
-  </div>
-  <div class="field">
-    <%# f.label :presentationTotal %>
-    <%# f.select :presentationTotal, options_for_select([1,2,3,4])%>
-  </div>
-  <div class="field">
-    <%# f.label :projectTotal %>
-    <%# f.select :projectTotal, options_for_select([1,2,3,4])%>
+    <%= f.label :presentation_effectiveness %><br />
+    <%= f.select :presentation_effectiveness, options_for_select([1,2,3,4])%>
   </div>
 		<%= f.submit 'Submit', class: 'btn btn-large btn-primary' %>
 <% end %>

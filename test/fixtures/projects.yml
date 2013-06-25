@@ -2,58 +2,58 @@
 #
 # Table name: projects
 #
-#  id                        :integer          not null, primary key
-#  problemIdentification     :integer
-#  sourcesOfInformation      :integer
-#  problemAnalysis           :integer
-#  reviewExistingSolutions   :integer
-#  teamSolution              :integer
-#  innovation                :integer
-#  implementation            :integer
-#  sharing                   :integer
-#  creativity                :integer
-#  presentationEffectiveness :integer
-#  researchTotal             :integer
-#  innovativeSolutionTotal   :integer
-#  presentationTotal         :integer
-#  projectTotal              :integer
-#  teamNumber                :integer
-#  created_at                :datetime         not null
-#  updated_at                :datetime         not null
+#  id                         :integer          not null, primary key
+#  team_number                :integer
+#  problem_identification     :integer
+#  sources_of_information     :integer
+#  problem_analysis           :integer
+#  review_existing_solutions  :integer
+#  team_solution              :integer
+#  innovation                 :integer
+#  implementation             :integer
+#  sharing                    :integer
+#  creativity                 :integer
+#  presentation_effectiveness :integer
+#  research_total             :integer
+#  innovative_solution_total  :integer
+#  presentation_total         :integer
+#  project_total              :integer
+#  created_at                 :datetime         not null
+#  updated_at                 :datetime         not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  problemIdentification: 1
-  sourcesOfInformation: 1
-  problemAnalysis: 1
-  reviewExistingSolutions: 1
-  teamSolution: 1
+  team_number: 1
+  problem_identification: 1
+  sources_of_information: 1
+  problem_analysis: 1
+  review_existing_solutions: 1
+  team_solution: 1
   innovation: 1
   implementation: 1
   sharing: 1
   creativity: 1
-  presentationEffectiveness: 1
-  researchTotal: 1
-  innovativeSolutionTotal: 1
-  presentationTotal: 1
-  project: 1
-  teamNumber: 1
+  presentation_effectiveness: 1
+  research_total: 1
+  innovative_solution_total: 1
+  presentation_total: 1
+  project_total: 1
 
 two:
-  problemIdentification: 1
-  sourcesOfInformation: 1
-  problemAnalysis: 1
-  reviewExistingSolutions: 1
-  teamSolution: 1
+  team_number: 1
+  problem_identification: 1
+  sources_of_information: 1
+  problem_analysis: 1
+  review_existing_solutions: 1
+  team_solution: 1
   innovation: 1
   implementation: 1
   sharing: 1
   creativity: 1
-  presentationEffectiveness: 1
-  researchTotal: 1
-  innovativeSolutionTotal: 1
-  presentationTotal: 1
-  project: 1
-  teamNumber: 1
+  presentation_effectiveness: 1
+  research_total: 1
+  innovative_solution_total: 1
+  presentation_total: 1
+  project_total: 1

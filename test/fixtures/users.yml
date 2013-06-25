@@ -38,31 +38,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  firstName: MyString
-  lastName: MyString
+  first_name: MyString
+  last_name: MyString
   street: MyString
   city: MyString
   zip: 1
   state: MyString
-  areaCode: 1
-  phoneNumber: 1
-  passwordDigest: MyString
-  rememberToken: MyString
-  userName: MyString
+  area_code: 1
+  phone_number: 1
   email: MyString
   type: 
 
 two:
-  firstName: MyString
-  lastName: MyString
+  first_name: MyString
+  last_name: MyString
   street: MyString
   city: MyString
   zip: 1
   state: MyString
-  areaCode: 1
-  phoneNumber: 1
-  passwordDigest: MyString
-  rememberToken: MyString
-  userName: MyString
+  area_code: 1
+  phone_number: 1
   email: MyString
   type: 

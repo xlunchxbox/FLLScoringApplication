@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   before_filter :authenticate_admin!
-  #before_filter :user_authorization
   
   # GET /users
   # GET /users.json
@@ -83,9 +82,4 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
-  # private
-#   def user_authorization
-#     redirect_to(root_url) unless current_user.id == params[:id]
-#   end
 end

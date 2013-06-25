@@ -2,8 +2,8 @@ class StaticPagesController < ApplicationController
   helper_method :sort_column, :sort_direction, :sort_columnCV, :sort_columnRD, :sort_columnP
   
   def home
-    @corevalues = Corevalue.order(sort_columnCV + " " + sort_direction)
-    @robotdesigns = Robotdesign.order(sort_columnRD + " " + sort_direction)
+    @core_values = CoreValue.order(sort_columnCV + " " + sort_direction)
+    @robot_designs = RobotDesign.order(sort_columnRD + " " + sort_direction)
     @projects = Project.order(sort_columnP + " " + sort_direction)
   end
 
@@ -15,15 +15,15 @@ class StaticPagesController < ApplicationController
   
   private
   def sort_columnCV
-    Corevalue.column_names.include?(params[:sort]) ? params[:sort] : "corevalueTotal"
+    CoreValue.column_names.include?(params[:sort]) ? params[:sort] : "core_value_total"
   end
   
   def sort_columnRD
-    Robotdesign.column_names.include?(params[:sort]) ? params[:sort] : "robotDesignTotal"
+    RobotDesign.column_names.include?(params[:sort]) ? params[:sort] : "robot_design_total"
   end
   
   def sort_columnP
-    Project.column_names.include?(params[:sort]) ? params[:sort] : "projectTotal"
+    Project.column_names.include?(params[:sort]) ? params[:sort] : "project_total"
   end
   
   def sort_direction

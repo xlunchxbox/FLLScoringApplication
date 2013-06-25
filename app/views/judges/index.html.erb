@@ -19,17 +19,14 @@
 <% @judges.each do |judge| %>
   <tr>
   	<td><%= judge.email %></td>
-	<td><%= judge.firstName %></td>
-	<td><%= judge.lastName %></td>
+	<td><%= judge.first_name %></td>
+	<td><%= judge.last_name %></td>
 	<td><%= judge.street %></td>
 	<td><%= judge.city %></td>
 	<td><%= judge.state %></td>
 	<td><%= judge.zip %></td>
-	<td><%= judge.areaCode %></td>
-	<td><%= judge.phoneNumber %></td>
-    <%# link_to 'Show', judge %>
-    <%# link_to 'Edit', edit_judge_path(judge) %>
-    <%# link_to 'Destroy', judge, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<td><%= judge.area_code %></td>
+	<td><%= judge.phone_number %></td>
 	<td><%= link_to image_tag('show.png'), judge %></td>
 	<td><%= link_to image_tag('penciledit.png'), edit_judge_path(judge) %></td>
 	<td><%= link_to image_tag('delete.jpg'), judge, method: :delete, data: {confirm: 'Are you sure?'}%></td>

@@ -1,0 +1,2 @@
+module RedirectUserHelper
+end

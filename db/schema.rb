@@ -11,30 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130524153448) do
+ActiveRecord::Schema.define(:version => 20130621195215) do
 
   create_table "admins", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  create_table "corevalues", :force => true do |t|
-    t.integer  "discovery",                    :null => false
-    t.integer  "teamSpirit",                   :null => false
-    t.integer  "integration",                  :null => false
-    t.integer  "effectiveness",                :null => false
-    t.integer  "efficiency",                   :null => false
-    t.integer  "kidsDoTheWork",                :null => false
-    t.integer  "inclusion",                    :null => false
-    t.integer  "respect",                      :null => false
-    t.integer  "coopertition",                 :null => false
-    t.integer  "inspirationTotal",             :null => false
-    t.integer  "teamworkTotal",                :null => false
-    t.integer  "graciousProfessionalismTotal", :null => false
-    t.integer  "coreValueTotal",               :null => false
-    t.integer  "teamNumber",                   :null => false
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+  create_table "core_values", :force => true do |t|
+    t.integer  "team_number"
+    t.integer  "discovery"
+    t.integer  "team_spirit"
+    t.integer  "integration"
+    t.integer  "effectiveness"
+    t.integer  "efficiency"
+    t.integer  "kids_do_the_work"
+    t.integer  "inclusion"
+    t.integer  "respect"
+    t.integer  "coopertition"
+    t.integer  "inspiration_total"
+    t.integer  "teamwork_total"
+    t.integer  "gracious_professionalism_total"
+    t.integer  "core_value_total"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
   end
 
   create_table "judges", :force => true do |t|
@@ -43,54 +43,53 @@ ActiveRecord::Schema.define(:version => 20130524153448) do
   end
 
   create_table "projects", :force => true do |t|
-    t.integer  "problemIdentification",     :null => false
-    t.integer  "sourcesOfInformation",      :null => false
-    t.integer  "problemAnalysis",           :null => false
-    t.integer  "reviewExistingSolutions",   :null => false
-    t.integer  "teamSolution",              :null => false
-    t.integer  "innovation",                :null => false
-    t.integer  "implementation",            :null => false
-    t.integer  "sharing",                   :null => false
-    t.integer  "creativity",                :null => false
-    t.integer  "presentationEffectiveness", :null => false
-    t.integer  "researchTotal",             :null => false
-    t.integer  "innovativeSolutionTotal",   :null => false
-    t.integer  "presentationTotal",         :null => false
-    t.integer  "projectTotal",              :null => false
-    t.integer  "teamNumber",                :null => false
+    t.integer  "team_number"
+    t.integer  "problem_identification"
+    t.integer  "sources_of_information"
+    t.integer  "problem_analysis"
+    t.integer  "review_existing_solutions"
+    t.integer  "team_solution"
+    t.integer  "innovation"
+    t.integer  "implementation"
+    t.integer  "sharing"
+    t.integer  "creativity"
+    t.integer  "presentation_effectiveness"
+    t.integer  "research_total"
+    t.integer  "innovative_solution_total"
+    t.integer  "presentation_total"
+    t.integer  "project_total"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
+
+  create_table "robot_designs", :force => true do |t|
+    t.integer  "team_number"
+    t.integer  "durability"
+    t.integer  "mechanical_efficiency"
+    t.integer  "mechanization"
+    t.integer  "programming_quality"
+    t.integer  "programming_efficiency"
+    t.integer  "automation_navigation"
+    t.integer  "design_process"
+    t.integer  "mission_strategy"
+    t.integer  "innovation"
+    t.integer  "mechanical_design_total"
+    t.integer  "programming_total"
+    t.integer  "strategy_innovation_total"
+    t.integer  "robot_design_total"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
   end
 
-  create_table "robotdesigns", :force => true do |t|
-    t.integer  "durability",              :null => false
-    t.integer  "mechanicalEfficiency",    :null => false
-    t.integer  "mechanization",           :null => false
-    t.integer  "programmingQuality",      :null => false
-    t.integer  "programmingEfficiency",   :null => false
-    t.integer  "automationNavigation",    :null => false
-    t.integer  "designProcess",           :null => false
-    t.integer  "missionStrategy",         :null => false
-    t.integer  "innovation",              :null => false
-    t.integer  "mechanicalDesignTotal",   :null => false
-    t.integer  "programmingTotal",        :null => false
-    t.integer  "strategyInnovationTotal", :null => false
-    t.integer  "robotDesignTotal",        :null => false
-    t.integer  "teamNumber",              :null => false
-    t.datetime "created_at",              :null => false
-    t.datetime "updated_at",              :null => false
-  end
-
   create_table "users", :force => true do |t|
-    t.string   "firstName"
-    t.string   "lastName"
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "street"
     t.string   "city"
     t.integer  "zip"
     t.string   "state"
-    t.integer  "areaCode"
-    t.integer  "phoneNumber"
-    t.string   "userName"
+    t.integer  "area_code"
+    t.integer  "phone_number"
     t.string   "type"
     t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false

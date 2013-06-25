@@ -45,10 +45,10 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(params[:project])
     
-    @project.researchTotal = @project.problemIdentification + @project.sourcesOfInformation + @project.problemAnalysis + @project.reviewExistingSolutions
-    @project.innovativeSolutionTotal = @project.teamSolution + @project.innovation + @project.implementation
-    @project.presentationTotal = @project.sharing + @project.creativity + @project.presentationEffectiveness
-    @project.projectTotal = @project.researchTotal + @project.innovativeSolutionTotal + @project.presentationTotal
+    @project.research_total = @project.problem_identification + @project.sources_of_information + @project.problem_analysis + @project.review_existing_solutions
+    @project.innovative_solution_total = @project.team_solution + @project.innovation + @project.implementation
+    @project.presentation_total = @project.sharing + @project.creativity + @project.presentation_effectiveness
+    @project.project_total = @project.research_total + @project.innovative_solution_total + @project.presentation_total
 
     respond_to do |format|
       if @project.save
@@ -90,7 +90,7 @@ class ProjectsController < ApplicationController
   end
   private
   def sort_column
-    Project.column_names.include?(params[:sort]) ? params[:sort] : "projectTotal"
+    Project.column_names.include?(params[:sort]) ? params[:sort] : "project_total"
   end
   
   def sort_direction

@@ -1,7 +1,7 @@
 class ConsoleController < ApplicationController
   def console
-    @corevalues = Corevalue.all
-    @robotdesigns = Robotdesign.all
+    @core_values = CoreValue.all
+    @robot_designs = RobotDesign.all
     @projects = Project.all
   end
 end

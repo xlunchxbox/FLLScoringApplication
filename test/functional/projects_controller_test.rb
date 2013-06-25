@@ -18,7 +18,7 @@ class ProjectsControllerTest < ActionController::TestCase
 
   test "should create project" do
     assert_difference('Project.count') do
-      post :create, project: { creativity: @project.creativity, implementation: @project.implementation, innovation: @project.innovation, innovativeSolutionTotal: @project.innovativeSolutionTotal, presentationEffectiveness: @project.presentationEffectiveness, presentationTotal: @project.presentationTotal, problemAnalysis: @project.problemAnalysis, problemIdentification: @project.problemIdentification, project: @project.project, researchTotal: @project.researchTotal, reviewExistingSolutions: @project.reviewExistingSolutions, sharing: @project.sharing, sourcesOfInformation: @project.sourcesOfInformation, teamNumber: @project.teamNumber, teamSolution: @project.teamSolution }
+      post :create, project: { creativity: @project.creativity, implementation: @project.implementation, innovation: @project.innovation, innovative_solution_total: @project.innovative_solution_total, presentation_effectiveness: @project.presentation_effectiveness, presentation_total: @project.presentation_total, problem_analysis: @project.problem_analysis, problem_identification: @project.problem_identification, project_total: @project.project_total, research_total: @project.research_total, review_existing_solutions: @project.review_existing_solutions, sharing: @project.sharing, sources_of_information: @project.sources_of_information, team_number: @project.team_number, team_solution: @project.team_solution }
     end
 
     assert_redirected_to project_path(assigns(:project))
@@ -35,7 +35,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test "should update project" do
-    put :update, id: @project, project: { creativity: @project.creativity, implementation: @project.implementation, innovation: @project.innovation, innovativeSolutionTotal: @project.innovativeSolutionTotal, presentationEffectiveness: @project.presentationEffectiveness, presentationTotal: @project.presentationTotal, problemAnalysis: @project.problemAnalysis, problemIdentification: @project.problemIdentification, project: @project.project, researchTotal: @project.researchTotal, reviewExistingSolutions: @project.reviewExistingSolutions, sharing: @project.sharing, sourcesOfInformation: @project.sourcesOfInformation, teamNumber: @project.teamNumber, teamSolution: @project.teamSolution }
+    put :update, id: @project, project: { creativity: @project.creativity, implementation: @project.implementation, innovation: @project.innovation, innovative_solution_total: @project.innovative_solution_total, presentation_effectiveness: @project.presentation_effectiveness, presentation_total: @project.presentation_total, problem_analysis: @project.problem_analysis, problem_identification: @project.problem_identification, project_total: @project.project_total, research_total: @project.research_total, review_existing_solutions: @project.review_existing_solutions, sharing: @project.sharing, sources_of_information: @project.sources_of_information, team_number: @project.team_number, team_solution: @project.team_solution }
     assert_redirected_to project_path(assigns(:project))
   end
 

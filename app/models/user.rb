@@ -44,7 +44,8 @@ class User < ActiveRecord::Base
          :token_authenticatable, :lockable, :timeoutable       
          #, :confirmable
 
+
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
-  attr_accessible :areaCode, :city, :firstName, :lastName, :phoneNumber, :state, :street, :type, :userName, :zip
+  attr_accessible :area_code, :city, :email, :first_name, :last_name, :phone_number, :state, :street, :type, :zip
 end

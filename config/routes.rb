@@ -1,38 +1,28 @@
-FLLApplication::Application.routes.draw do
+FLLScoringApplication::Application.routes.draw do
+  get "redirect_user/redirecting"
 
-  get "console/console"
+  get "search/search_results"
 
   devise_for :users
   devise_for :admins
   devise_for :judges
 
-  get "sessions/new"
-
-  get "sessions/create"
-
-  get "sessions/destroy"
+  get "console/console"
 
   get "static_pages/home"
 
   get "static_pages/about"
-  
-  get "adminconsole/console"
-  
-  get "judgeconsole/console"
-  
-  get "search/searchresults"
-  
 
+  get "static_pages/help"
+  
   match '/about', to: 'static_pages#about'
   match '/help', to: 'static_pages#help'
   match '/home', to: 'static_pages#home'
-  
 
-  
-  resources :robotdesigns
+  resources :robot_designs
 
 
-  resources :corevalues
+  resources :core_values
 
 
   resources :projects
@@ -45,86 +35,6 @@ FLLApplication::Application.routes.draw do
 
 
   resources :users
-
-
-
-  # routes for devise START
-  # devise_scope :judges do
-  #   root :to => 'judgeconsole#console'
-  # end
-  # devise_scope :admins do
-  #   root :to => 'adminconsole#console'
-  # end
-  # routes for devise END
   
-  root to: 'redirectuser#redirecting'
-  
-  # devise_scope :admin do
-#     get "/login" => "adminconsole/console"
-#     delete "/logout" => "devise/sessions#destroy"
-#   end
-#   
-#   devise_scope :judge do
-#     get "/login" => "judgeconsole/console"
-#     delete "/logout" => "devise/sessions#destroy"
-#   end
-
-
-
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
-
-  # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
-
-  # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
-
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Sample resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Sample resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Sample resource route with more complex sub-resources
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', :on => :collection
-  #     end
-  #   end
-
-  # Sample resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
-
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
-
-  # See how all your routes lay out with "rake routes"
-
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  root to: 'redirect_user#redirecting'
 end

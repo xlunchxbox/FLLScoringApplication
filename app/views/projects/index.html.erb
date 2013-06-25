@@ -1,28 +1,35 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css"/>
+<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.js"></script>
 <script type="text/javascript">
-    $(function(){
-       $('[rel="tooltip"]').tooltip();
+  $(document).ready(function () {
+    $('[rel="tooltip"]').tooltip({
+      'selector': '',
+      'placement': 'top'
     });
+  });
 </script>
+
 
 <h1>Project</h1>
 
 <table class = "table table-bordered table-striped table table-hover pretty">
   <tr>
-    <th><%= tooltip (sortable "teamNumber","Team #"), { :tooltip => 'Team #' }, :rel => 'tooltip' %></th>
-    <th><%= tooltip (sortable "problemIdentification", "PI"), { :tooltip => 'Problem Identification' }, :rel => 'tooltip' %></th>
-    <th><%= tooltip (sortable "sourcesOfInformation", "SOI"), { :tooltip => 'Sources of Information' }, :rel => 'tooltip' %></th>
-    <th><%= tooltip (sortable "problemAnalysis", "PA"), { :tooltip => 'Problem Analyisis' }, :rel => 'tooltip' %></th>
-    <th><%= tooltip (sortable "reviewExistingSolutions", "RES"), { :tooltip => 'Review Existing Solutions' }, :rel => 'tooltip' %></th>
-    <th><%= tooltip (sortable "teamSolution", "TS"), { :tooltip => 'Team Solution' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "team_number","Team #"), { :tooltip => 'Team #' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "problem_identification", "PI"), { :tooltip => 'Problem Identification' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "sources_of_Information", "SOI"), { :tooltip => 'Sources of Information' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "problem_analysis", "PA"), { :tooltip => 'Problem Analyisis' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "review_existing_solutions", "RES"), { :tooltip => 'Review Existing Solutions' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "team_solution", "TS"), { :tooltip => 'Team Solution' }, :rel => 'tooltip' %></th>
     <th><%= tooltip (sortable "innovation", "Inn"), { :tooltip => 'Innovation' }, :rel => 'tooltip' %></th>
     <th><%= tooltip (sortable "implementation", "Imp"), { :tooltip => 'Implementation' }, :rel => 'tooltip' %></th>
     <th><%= tooltip (sortable "sharing", "Sh"), { :tooltip => 'Sharing' }, :rel => 'tooltip' %></th>
     <th><%= tooltip (sortable "creativity", "C"), { :tooltip => 'Creativity' }, :rel => 'tooltip' %></th>
-    <th><%= tooltip (sortable "presentationEffectiveness", "PE"), { :tooltip => 'Presentation Effectiveness' }, :rel => 'tooltip' %></th>
-    <th><%= tooltip (sortable "researchTotal", "RT"), { :tooltip => 'Research Total' }, :rel => 'tooltip' %></th>
-    <th><%= tooltip (sortable "innovativeSolutionTotal", "IT"), { :tooltip => 'Innovative Solution Total' }, :rel => 'tooltip' %></th>
-    <th><%= tooltip (sortable "presentationTotal", "P"), { :tooltip => 'Presentation Total' }, :rel => 'tooltip' %></th>
-    <th><%= tooltip (sortable "projectTotal", "PT"), { :tooltip => 'Project Total' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "presentation_effectiveness", "PE"), { :tooltip => 'Presentation Effectiveness' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "research_total", "RT"), { :tooltip => 'Research Total' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "innovative_solution_total", "IT"), { :tooltip => 'Innovative Solution Total' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "presentation_total", "P"), { :tooltip => 'Presentation Total' }, :rel => 'tooltip' %></th>
+    <th><%= tooltip (sortable "project_total", "PT"), { :tooltip => 'Project Total' }, :rel => 'tooltip' %></th>
 	<% if signed_in? %>
 	    <th></th>
 	    <th></th>
@@ -32,25 +39,22 @@
 
 <% @projects.each do |project| %>
   <tr>
-    <td><%= project.teamNumber %></td>
-    <td><%= project.problemIdentification %></td>
-    <td><%= project.sourcesOfInformation %></td>
-    <td><%= project.problemAnalysis %></td>
-    <td><%= project.reviewExistingSolutions %></td>
-    <td><%= project.teamSolution %></td>
+    <td><%= project.team_number %></td>
+    <td><%= project.problem_identification %></td>
+    <td><%= project.sources_of_information %></td>
+    <td><%= project.problem_analysis %></td>
+    <td><%= project.review_existing_solutions %></td>
+    <td><%= project.team_solution %></td>
     <td><%= project.innovation %></td>
     <td><%= project.implementation %></td>
     <td><%= project.sharing %></td>
     <td><%= project.creativity %></td>
-    <td><%= project.presentationEffectiveness %></td>
-    <td><%= project.researchTotal %></td>
-    <td><%= project.innovativeSolutionTotal %></td>
-    <td><%= project.presentationTotal %></td>
-    <td><%= project.projectTotal %></td>
-    <%# link_to 'Show', project %>
-    <%# link_to 'Edit', edit_project_path(project) %>
-    <%# link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
-	<% if signed_in? %>
+    <td><%= project.presentation_effectiveness %></td>
+    <td><%= project.research_total %></td>
+    <td><%= project.innovative_solution_total %></td>
+    <td><%= project.presentation_total %></td>
+    <td><%= project.project_total %></td>
+    <% if signed_in? %>
 		<td><%= link_to image_tag('show.png'), project %></td>
 		<td><%= link_to image_tag('penciledit.png'), edit_project_path(project) %></td>
 		<td><%= link_to image_tag('delete.jpg'), project, method: :delete, data: {confirm: 'Are you sure?'}%></td>

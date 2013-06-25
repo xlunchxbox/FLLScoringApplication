@@ -23,12 +23,9 @@ Rails G Commands for Controllers
 
 rails g controller static_pages home about help
 
-rails g controller adminconsole console
-
-rails g controller judgeconsole console
-
 rails g controller console admin judge
 
+rails g controller Search search_results
 ===============
 devise commands
 ===============

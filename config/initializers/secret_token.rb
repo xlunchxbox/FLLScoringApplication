@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-FLLApplication::Application.config.secret_token = '3f882e36b8c5e40bb6c08e6589c5d550e54cf18b882abf2444e920a065d32c49085f63dfef9e8c0291da9e328258f0134d898e19442dc914925533ab6e30bb05'
+FLLScoringApplication::Application.config.secret_token = 'bbc2daf4fd8b0d4093a556acc8fdb43dc02ec4b693964442bc63740e78fc6c2f4408a74585a620f57a5b139daab6bbb0b7719a35252a85634a6e222339655e25'
