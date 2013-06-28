@@ -85,14 +85,6 @@
 	<br><br>
 <% end %>
 
-<% @core_values.each do |tn| %>
-<td><%= tn.teamNumber %></td>
-<td><%= tn.mechanicalDesignTotal %></td>
-<td><%= tn.programmingTotal %></td>
-<td><%= tn.strategyInnovationTotal %></td>
-<td><%= tn.robotDesignTotal %></td>
-<% end %>
-
 <% if @search_core.count == 0 && @search_project.count == 0 && @search_robot_design.count == 0 %>
 <center><h4>No results for your query</h4></center>
 <% end %>
