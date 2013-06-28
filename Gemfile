@@ -4,8 +4,6 @@ source 'https://rubygems.org'
 #bootstrap gems for CSS
 #bcrypt for encrypting passwords
 gem 'rails', '3.2.13'
-gem 'rake', '0.8.7'
-#gem 'ruby', '1.9.3'
 gem 'bootstrap-sass', '2.1'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
