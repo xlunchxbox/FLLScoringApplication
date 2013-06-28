@@ -1,6 +1,6 @@
 <h1>Search Results</h1>
 
-<% if @search_core.count > 0 %>
+<%# if @search_core.count > 0 %>
 	<h4>Core Values</h4>
 	<table class = "table table-bordered table-striped table table-hover table-condensed">
 		<!--
@@ -26,9 +26,9 @@
 	<% end %>
 	</table>
 	<br><br>
-<% end %>
+<%# end %>
 
-<% if @search_project.count > 0 %>
+<%# if @search_project.count > 0 %>
 	<h4>Project</h4>
 	<table class = "table table-bordered table-striped table table-hover table-condensed">
 		<!--
@@ -54,10 +54,10 @@
 	<% end %>
 	</table>
 	<br><br>
-<% end %>
+<%# end %>
 
 
-<% if @search_robot_design.count > 0 %>
+<%# if @search_robot_design.count > 0 %>
 	<h4>Robot Design</h4>
 	<table class = "table table-bordered table-striped table table-hover table-condensed">
 		<!--
@@ -83,8 +83,8 @@
 	<% end %>
 	</table>
 	<br><br>
-<% end %>
+<%# end %>
 
-<% if @search_core.count == 0 && @search_project.count == 0 && @search_robot_design.count == 0 %>
+<%# if @search_core.count == 0 && @search_project.count == 0 && @search_robot_design.count == 0 %>
 <center><h4>No results for your query</h4></center>
-<% end %>
+<%# end %>
