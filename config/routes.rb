@@ -36,5 +36,6 @@ FLLScoringApplication::Application.routes.draw do
 
   resources :users
   
+  root to: 'static_pages#home'#remove me if errors are still casued on heroku
   root to: 'redirect_user#redirecting'
 end
