@@ -3,17 +3,17 @@
 <head>
 	<meta http-equiv="refresh" content="60" />
 	
-	<title>Carousel Template</title>
-	<!-- 
+	<!--
+	<title>Carousel Template</title> 
 	<script src="http://threedubmedia.com/inc/js/jquery.event.drag-2.2.js"></script>
 	<script src="http://threedubmedia.com/inc/js/jquery.event.drag.live-2.2.js"></script>
 	<script src="http://threedubmedia.com/inc/js/jquery.event.drop-2.2.js"></script>
 	<script src="http://threedubmedia.com/inc/js/jquery.event.drop.live-2.2.js"></script>
+	<#= javascript_include_tag 'http://threedubmedia.com/inc/js/jquery.event.drag-2.2.js' %>
+	<#= javascript_include_tag 'http://threedubmedia.com/inc/js/jquery.event.drag.live-2.2.js' %>
+	<#= javascript_include_tag 'http://threedubmedia.com/inc/js/jquery.event.drop-2.2.js' %>
+	<#= javascript_include_tag 'http://threedubmedia.com/inc/js/jquery.event.drop.live-2.2.js' %>
 	-->
-		<%= javascript_include_tag 'http://threedubmedia.com/inc/js/jquery.event.drag-2.2.js' %>
-		<%= javascript_include_tag 'http://threedubmedia.com/inc/js/jquery.event.drag.live-2.2.js' %>
-		<%= javascript_include_tag 'http://threedubmedia.com/inc/js/jquery.event.drop-2.2.js' %>
-		<%= javascript_include_tag 'http://threedubmedia.com/inc/js/jquery.event.drop.live-2.2.js' %>
 	
 </head>
 <body>
@@ -54,7 +54,7 @@
 					<th>Project Total</th>
 				</tr>
 
-			  <% @projects.take(5).each do |project| %>
+				<% @projects.take(5).each do |project| %>
 				<tr bgcolor="#FFB280">
 					<td><%= project.team_number %></td>
 					<td><%= project.research_total %></td>
@@ -62,7 +62,7 @@
 					<td><%= project.presentation_total %></td>
 					<td><%= project.project_total %></td>
 				</tr>
-			  <% end %>
+				<% end %>
 			</table>
 		</li>
 
@@ -77,7 +77,7 @@
 					<th>Robot Design Total</th>
 				</tr>
 
-			  <% @robot_designs.take(5).each do |robotdesign| %>
+				<% @robot_designs.take(5).each do |robotdesign| %>
 				<tr bgcolor="#A3FFFF">
 					<td><%= robotdesign.team_number %></td>
 					<td><%= robotdesign.mechanical_design_total %></td>
@@ -85,7 +85,7 @@
 					<td><%= robotdesign.strategy_innovation_total %></td>
 					<td><%= robotdesign.robot_design_total %></td>
 				</tr>
-			  <% end %>
+				<% end %>
 			</table>
 		</li>
 		
