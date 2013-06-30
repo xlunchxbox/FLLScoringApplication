@@ -8,6 +8,7 @@
 	<script type="text/javascript" src="http://threedubmedia.com/inc/js/jquery.event.drop-2.2.js"></script>
 	<script type="text/javascript" src="http://threedubmedia.com/inc/js/jquery.event.drop.live-2.2.js"></script>
 	-->
+	<script type="text/javascript" src="http://fredhq.com/lib/js/projects/roundabout-shapes/jquery.roundabout-shapes2.js"></script>
 	<!--
 	<#= javascript_include_tag 'http://threedubmedia.com/inc/js/jquery.event.drag-2.2.js' %>
 	<#= javascript_include_tag 'http://threedubmedia.com/inc/js/jquery.event.drag.live-2.2.js' %>
@@ -109,11 +110,11 @@
 	$(document).ready(function() {
 		$('ul#roundabout_carousel').roundabout({
 			autoplay: true,
-			autoplayDuration: 1000,
+			autoplayDuration: 10000,
 			enableDrag: true,
 			autoplayPauseOnHover: true,
-			// possible shapes: lazySusan waterWheel figure8 square conveyorBeltLeft conveyorBeltRight diagonalRingLeft diagonalRingRight rollerCoaster tearDrop theJuggler goodbyeCruelWorld
-			shape: 'lazySusan'
+			// possible shapes: lazySusan waterWheel figure8 square conveyorBeltLeft conveyorBeltRight diagonalRingLeft diagonalRingRight rollerCoaster tearDrop theJuggler goodbyeCruelWorld risingEssence flurry tickingClock
+			shape: 'tearDrop'
 		});
 	});
 	</script>
