@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="refresh" content="60" />
-	<script type="text/javascript" src="http://fredhq.com/lib/js/projects/roundabout-shapes/jquery.roundabout-shapes2.js"></script>
+	<!-- <meta http-equiv="refresh" content="60" /> -->
 
 </head>
 <body>
-	
+	<div>
 	<!-- Round about carousel start -->
 	<ul id="roundabout_carousel">
 		<li>
@@ -80,29 +79,29 @@
 		
 	</ul>
 	<!-- Round about carousel end-->
-
+</div>
+<div>
 	<center>
 		<a class="btn" href="/core_values">Core Values</a>
-		<a class="btn" href="/project">Project</a>
+		<a class="btn" href="/projects">Project</a>
 		<a class="btn" href="/robot_designs">Robot Designs</a>
-	</center>			
-		
+	</center>		
+</div>	
 	
 	
 
 
+	
+
+</body>
 	<script>
 	$(document).ready(function() {
 		$('ul#roundabout_carousel').roundabout({
 			autoplay: true,
 			autoplayDuration: 10000,
 			enableDrag: true,
-			autoplayPauseOnHover: true,
-			// possible shapes: lazySusan waterWheel figure8 square conveyorBeltLeft conveyorBeltRight diagonalRingLeft diagonalRingRight rollerCoaster tearDrop theJuggler goodbyeCruelWorld risingEssence flurry tickingClock
-			shape: 'tearDrop'
+			autoplayPauseOnHover: true
 		});
 	});
 	</script>
-
-</body>
 </html>
