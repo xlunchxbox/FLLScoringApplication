@@ -1,0 +1,35 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+	<div class="navbar-inner">
+		<a href = "/home"><%= image_tag "/sslogo.png"%></a>
+
+		<ul class="nav pull-right">
+
+			<!-- search from -->
+			<%= form_tag search_search_results_path, :method => 'get', :class => "navbar-search pull-left" do %>
+			<%= text_field_tag :search, params[:search], :placeholder => "Search by team number...", :class =>"input-large search-query" %>
+			<% end %>
+			<!-- search from -->
+
+			<li><%= link_to "Home", home_path %></li>
+			<li><%= link_to "About", about_path %></li>
+
+			<% if user_signed_in? %>
+			<li><%= link_to "Console", users_console_path %></li>
+
+			<li id="fat-menu" class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account<b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu">
+					<li><%= link_to "Edit Account", edit_user_path(current_user) %></li>
+					<li class="divider"></li>
+					<li><%= link_to "Sign out", destroy_user_session_path %></li>
+				</ul>
+			</li>
+
+			<% else %>
+			<li><%= link_to "Sign in", new_user_session_path %></li>
+			<% end %>
+
+		</ul>
+	</div>
+</header>

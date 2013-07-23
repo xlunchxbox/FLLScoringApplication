@@ -1,0 +1,79 @@
+<%= form_for(@robot_design) do |f| %>
+  <% if @robot_design.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@robot_design.errors.count, "error") %> prohibited this robot_design from being saved:</h2>
+
+      <ul>
+      <% @robot_design.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+  <div class="span6 offset5">
+
+  <div class="field">
+    <%= f.label :team_number %>
+    <%= f.text_field :team_number %>
+  </div>
+  <div class="field">
+    <%= f.label :durability %>
+    <%= f.text_field :durability %>
+  </div>
+  <div class="field">
+    <%= f.label :mechanical_efficiency %>
+    <%= f.text_field :mechanical_efficiency %>
+  </div>
+  <div class="field">
+    <%= f.label :mechanization %>
+    <%= f.text_field :mechanization %>
+  </div>
+  <div class="field">
+    <%= f.label :programming_quality %>
+    <%= f.text_field :programming_quality %>
+  </div>
+  <div class="field">
+    <%= f.label :programming_efficiency %>
+    <%= f.text_field :programming_efficiency %>
+  </div>
+  <div class="field">
+    <%= f.label :automation_navigation %>
+    <%= f.text_field :automation_navigation %>
+  </div>
+  <div class="field">
+    <%= f.label :design_process %>
+    <%= f.text_field :design_process %>
+  </div>
+  <div class="field">
+    <%= f.label :mission_strategy %>
+    <%= f.text_field :mission_strategy %>
+  </div>
+  <div class="field">
+    <%= f.label :innovation %>
+    <%= f.text_field :innovation %>
+  </div>
+  <div class="field">
+    <%= f.label :mechanical_design_total %>
+    <%= f.text_field :mechanical_design_total %>
+  </div>
+  <div class="field">
+    <%= f.label :programming_total %>
+    <%= f.text_field :programming_total %>
+  </div>
+  <div class="field">
+    <%= f.label :strategy_innovation_total %>
+    <%= f.text_field :strategy_innovation_total %>
+  </div>
+  <div class="field">
+    <%= f.label :robot_design_total %>
+    <%= f.text_field :robot_design_total %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Update Robot Design", :class => "btn btn-primary btn-large"  %>
+  </div>
+<% end %>
+
+  </div>
+</div>
