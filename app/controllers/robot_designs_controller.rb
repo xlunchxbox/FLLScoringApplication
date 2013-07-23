@@ -4,7 +4,7 @@ class RobotDesignsController < ApplicationController
   # GET /robot_designs
   # GET /robot_designs.json
   def index
-    @robot_designs = RobotDesign.all
+    @robot_designs = RobotDesign.order(sort_column + " " + sort_direction)
 
     respond_to do |format|
       format.html # index.html.erb

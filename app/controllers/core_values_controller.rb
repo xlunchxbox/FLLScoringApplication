@@ -4,7 +4,7 @@ class CoreValuesController < ApplicationController
   # GET /core_values
   # GET /core_values.json
   def index
-    @core_values = CoreValue.all
+    @core_values = CoreValue.order(sort_column + " " + sort_direction)
 
     respond_to do |format|
       format.html # index.html.erb
