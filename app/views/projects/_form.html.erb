@@ -20,62 +20,46 @@
     </div>
     <div class="field">
       <%= f.label :problem_identification %>
-      <%= f.text_field :problem_identification %>
+      <%= f.select :problem_identification, options_for_select(scores)%>
     </div>
     <div class="field">
       <%= f.label :sources_of_information %>
-      <%= f.text_field :sources_of_information %>
+      <%= f.select :sources_of_information, options_for_select(scores)%>
     </div>
     <div class="field">
       <%= f.label :problem_analysis %>
-      <%= f.text_field :problem_analysis %>
+      <%= f.select :problem_analysis, options_for_select(scores)%>
     </div>
     <div class="field">
       <%= f.label :review_existing_solutions %>
-      <%= f.text_field :review_existing_solutions %>
+      <%= f.select :review_existing_solutions, options_for_select(scores)%>
     </div>
     <div class="field">
       <%= f.label :team_solution %>
-      <%= f.text_field :team_solution %>
+      <%= f.select :team_solution, options_for_select(scores)%>
     </div>
     <div class="field">
       <%= f.label :innovation %>
-      <%= f.text_field :innovation %>
+      <%= f.select :innovation, options_for_select(scores)%>
     </div>
     <div class="field">
       <%= f.label :implementation %>
-      <%= f.text_field :implementation %>
+      <%= f.select :implementation, options_for_select(scores)%>
     </div>
     <div class="field">
       <%= f.label :sharing %>
-      <%= f.text_field :sharing %>
+      <%= f.select :sharing, options_for_select(scores)%>
     </div>
     <div class="field">
       <%= f.label :creativity %>
-      <%= f.text_field :creativity %>
+      <%= f.select :creativity, options_for_select(scores)%>
     </div>
     <div class="field">
       <%= f.label :presentation_effectiveness %>
-      <%= f.text_field :presentation_effectiveness %>
-    </div>
-    <div class="field">
-      <%= f.label :research_total %>
-      <%= f.text_field :research_total %>
-    </div>
-    <div class="field">
-      <%= f.label :innovative_solution_total %>
-      <%= f.text_field :innovative_solution_total %>
-    </div>
-    <div class="field">
-      <%= f.label :presentation_total %>
-      <%= f.text_field :presentation_total %>
-    </div>
-    <div class="field">
-      <%= f.label :project_total %>
-      <%= f.text_field :project_total %>
+      <%= f.select :presentation_effectiveness, options_for_select(scores)%>
     </div>
     <div class="actions">
-    <%= f.submit "Update Project", :class => "btn btn-primary btn-large"  %>
+    <%= f.submit "Submit", :class => "btn btn-primary btn-large"  %>
     </div>
     <% end %>
 

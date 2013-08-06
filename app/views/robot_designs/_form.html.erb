@@ -20,58 +20,42 @@
   </div>
   <div class="field">
     <%= f.label :durability %>
-    <%= f.text_field :durability %>
+    <%= f.select :durability, options_for_select(scores)%>
   </div>
   <div class="field">
     <%= f.label :mechanical_efficiency %>
-    <%= f.text_field :mechanical_efficiency %>
+    <%= f.select :mechanical_efficiency, options_for_select(scores)%>
   </div>
   <div class="field">
     <%= f.label :mechanization %>
-    <%= f.text_field :mechanization %>
+    <%= f.select :mechanization, options_for_select(scores)%>
   </div>
   <div class="field">
     <%= f.label :programming_quality %>
-    <%= f.text_field :programming_quality %>
+    <%= f.select :programming_quality, options_for_select(scores)%>
   </div>
   <div class="field">
     <%= f.label :programming_efficiency %>
-    <%= f.text_field :programming_efficiency %>
+    <%= f.select :programming_efficiency, options_for_select(scores)%>
   </div>
   <div class="field">
     <%= f.label :automation_navigation %>
-    <%= f.text_field :automation_navigation %>
+    <%= f.select :automation_navigation, options_for_select(scores)%>
   </div>
   <div class="field">
     <%= f.label :design_process %>
-    <%= f.text_field :design_process %>
+    <%= f.select :design_process, options_for_select(scores)%>
   </div>
   <div class="field">
     <%= f.label :mission_strategy %>
-    <%= f.text_field :mission_strategy %>
+    <%= f.select :mission_strategy, options_for_select(scores)%>
   </div>
   <div class="field">
     <%= f.label :innovation %>
-    <%= f.text_field :innovation %>
-  </div>
-  <div class="field">
-    <%= f.label :mechanical_design_total %>
-    <%= f.text_field :mechanical_design_total %>
-  </div>
-  <div class="field">
-    <%= f.label :programming_total %>
-    <%= f.text_field :programming_total %>
-  </div>
-  <div class="field">
-    <%= f.label :strategy_innovation_total %>
-    <%= f.text_field :strategy_innovation_total %>
-  </div>
-  <div class="field">
-    <%= f.label :robot_design_total %>
-    <%= f.text_field :robot_design_total %>
+    <%= f.select :innovation, options_for_select(scores)%>
   </div>
   <div class="actions">
-    <%= f.submit "Update Robot Design", :class => "btn btn-primary btn-large"  %>
+    <%= f.submit "Submit", :class => "btn btn-primary btn-large"  %>
   </div>
 <% end %>
 

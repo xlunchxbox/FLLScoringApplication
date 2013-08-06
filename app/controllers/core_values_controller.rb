@@ -43,6 +43,11 @@ class CoreValuesController < ApplicationController
   # POST /core_values.json
   def create
     @core_value = CoreValue.new(params[:core_value])
+    
+    @core_value.inspiration_total = @core_value.discovery + @core_value.team_spirit + @core_value.integration
+    @core_value.teamwork_total = @core_value.effectiveness + @core_value.efficiency + @core_value.kids_do_the_work
+    @core_value.gracious_professionalism_total = @core_value.inclusion + @core_value.respect + @core_value.coopertition
+    @core_value.core_value_total = @core_value.inspiration_total + @core_value.teamwork_total + @core_value.gracious_professionalism_total
 
     respond_to do |format|
       if @core_value.save

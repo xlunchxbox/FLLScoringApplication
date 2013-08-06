@@ -33,4 +33,8 @@ module ApplicationHelper
     html_options[:rel] = html_options[:rel] || 'tooltip' 
     content_tag("span", content, html_options)
   end
+  
+  def scores
+    scores_list = %w[1 2 3 4]
+  end
 end

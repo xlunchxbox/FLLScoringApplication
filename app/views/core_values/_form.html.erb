@@ -20,58 +20,42 @@
     </div>
     <div class="field">
       <%= f.label :discovery %>
-      <%= f.text_field :discovery %>
+	  <%= f.select :discovery, options_for_select(scores)%>
     </div>
     <div class="field">
       <%= f.label :team_spirit %>
-      <%= f.text_field :team_spirit %>
+	  <%= f.select :team_spirit, options_for_select(scores)%>
     </div>
     <div class="field">
       <%= f.label :integration %>
-      <%= f.text_field :integration %>
+	  <%= f.select :integration, options_for_select(scores)%>
     </div>
     <div class="field">
       <%= f.label :effectiveness %>
-      <%= f.text_field :effectiveness %>
+      <%= f.select :effectiveness, options_for_select(scores)%>
     </div>
     <div class="field">
       <%= f.label :efficiency %>
-      <%= f.text_field :efficiency %>
+      <%= f.select :efficiency, options_for_select(scores)%>
     </div>
     <div class="field">
       <%= f.label :kids_do_the_work %>
-      <%= f.text_field :kids_do_the_work %>
+      <%= f.select :kids_do_the_work, options_for_select(scores)%>
     </div>
     <div class="field">
       <%= f.label :inclusion %>
-      <%= f.text_field :inclusion %>
+      <%= f.select :inclusion, options_for_select(scores)%>
     </div>
     <div class="field">
       <%= f.label :respect %>
-      <%= f.text_field :respect %>
+      <%= f.select :respect, options_for_select(scores)%>
     </div>
     <div class="field">
       <%= f.label :coopertition %>
-      <%= f.text_field :coopertition %>
-    </div>
-    <div class="field">
-      <%= f.label :inspiration_total %>
-      <%= f.text_field :inspiration_total %>
-    </div>
-    <div class="field">
-      <%= f.label :teamwork_total %>
-      <%= f.text_field :teamwork_total %>
-    </div>
-    <div class="field">
-      <%= f.label :gracious_professionalism_total %>
-      <%= f.text_field :gracious_professionalism_total %>
-    </div>
-    <div class="field">
-      <%= f.label :core_value_total %>
-      <%= f.text_field :core_value_total %>
+      <%= f.select :coopertition, options_for_select(scores)%>
     </div>
     <div class="actions">
-      <%= f.submit "Update Core Value", :class => "btn btn-primary btn-large"  %>
+      <%= f.submit "Submit", :class => "btn btn-primary btn-large"  %>
     </div>
     <% end %>
 
