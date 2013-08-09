@@ -64,6 +64,11 @@ class RobotDesignsController < ApplicationController
   # PUT /robot_designs/1.json
   def update
     @robot_design = RobotDesign.find(params[:id])
+    
+    @robot_design.mechanical_design_total = @robot_design.durability + @robot_design.mechanical_efficiency + @robot_design.mechanization
+    @robot_design.programming_total = @robot_design.programming_quality + @robot_design.programming_efficiency + @robot_design.automation_navigation 
+    @robot_design.strategy_innovation_total = @robot_design.design_process + @robot_design.mission_strategy + @robot_design.innovation
+    @robot_design.robot_design_total = @robot_design.mechanical_design_total + @robot_design.programming_total + @robot_design.strategy_innovation_total
 
     respond_to do |format|
       if @robot_design.update_attributes(params[:robot_design])
