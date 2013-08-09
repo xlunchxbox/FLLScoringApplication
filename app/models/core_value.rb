@@ -2,4 +2,5 @@ class CoreValue < ActiveRecord::Base
   attr_accessible :coopertition, :core_value_total, :discovery, :effectiveness, :efficiency, :gracious_professionalism_total, :inclusion, :inspiration_total, :integration, :kids_do_the_work, :respect, :team_number, :team_spirit, :teamwork_total
   validates_presence_of :coopertition, :core_value_total, :discovery, :effectiveness, :efficiency, :gracious_professionalism_total, :inclusion, :inspiration_total, :integration, :kids_do_the_work, :respect, :team_number, :team_spirit, :teamwork_total
   validates_numericality_of :team_number
+  validates_uniqueness_of :team_number
 end
