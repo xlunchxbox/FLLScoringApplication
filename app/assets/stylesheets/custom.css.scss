@@ -1,15 +1,5 @@
 @import "bootstrap";
 
-.main {
- margin:0 auto;
- float:none;
-}
-
-.center { 
-	float: 100; 
-	margin-left: auto; 
-	margin-right: auto; 
-}
 
 /****************** universal table formatting ******************/
 .table th,
@@ -161,7 +151,7 @@ border-top: 1px solid #eee;
 border: 0;
 padding-top: 0;
 }
-azimuth {
+span {
 display: block;
 margin-bottom: 3px;
 line-height: 1;
@@ -272,11 +262,10 @@ line-height: 1;
 border-radius: 15px;
 }
 
-//link standard color
+//Change link & hover color on navbar
 .navbar .brand, .navbar .nav > li > a {
 color: #FFFFFF;
 }
-//link hover color in navbar
 .navbar .brand, .navbar .nav > li > a:hover {
 color: #a3a3a3;
 }
@@ -624,12 +613,3 @@ background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75),
 background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
 }
 /************************************* hr tag on console page end *************************************/
-
-
-
-
-
-
-
-
-
